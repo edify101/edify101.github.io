@@ -1,3 +1,6 @@
+---
+permalink: /about/
+---
 <html>
 <head>
 </head>
