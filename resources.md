@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Local, educational resources
-permalink: /resources
+permalink: /resources/
 ---
 <html>
 <head>
