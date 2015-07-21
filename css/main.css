@@ -1,7 +1,26 @@
-body {
-    margin: 60px auto;
-    width: 70%;
+element.style {
+  text-align: center;
+  background-color: #E0B2E0;
 }
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+  font-family: Merriweather, Georgia, Times, serif;
+  font-size: 14px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+user agent stylesheetbody {
+  display: block;
+  margin: 8px;
+}
+Inherited from 
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+  font-family: Merriweather, Georgia, Times, serif;
+  font-size: 14px;
+}
+
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
