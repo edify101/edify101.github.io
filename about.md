@@ -21,3 +21,21 @@ courses, extracurriculars, provide support, and more. We hope to also provide SA
 <p>
 We need mentors, and you can get community service hours! We need sponsors, and you can get your business's name out there! Contact us on the form on the homepage, at the moment.
 </p>
+<div class = "bios">
+<div class = "img">
+<img src = "https://www.facebook.com/photo.php?fbid=10154067870850471&set=t.1374452524&type=3&theater">
+</div>
+<div class = "bio">
+<p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. 
+</p>
+</div>
+<div class = "img">
+<img src = "https://www.facebook.com/photo.php?fbid=10202735220634195&set=a.1521887759704.77097.1009888444&type=1&theater">
+</div>
+<div class = "bio">
+<p>Savannah attends Dartmouth, in Hanover, New Hampshire. She enjoys YouTube, attending hackathons, drawing, and DIY projects. Talk to her about comedians. 
+</p>
+</div>
+</div>
+</body>
+</html>
