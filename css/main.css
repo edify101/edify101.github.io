@@ -61,3 +61,15 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+.bios {
+   float:left;
+    position: relative;
+    width: 30%;
+    display: inline;
+}
+
+.img {
+  width: 100%;
+  height: 4.5in;
+}
