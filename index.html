@@ -7,7 +7,19 @@
 <meta name="description" content="high school and college prep and resources, mentoring">
 <meta name="author" content="Lizzie Siegle">
 <meta http-equiv="refresh" content="30">
+ <script language = "Javascript" type = "text/javascript">
+        function welcomePopUp() {
+            window.open();
+            alert('Welcome to Edify101!')
+        }
+        // function goodByePopUp() {
+        //     window.open();
+        //     alert('Have a nice day!')
+        // }
+    </script>
 </head>
+<body onload = "welcomePopUp()" onunload = "goodByePopUp()">
+</body>
 <body>
 <nav>
     		<ul style = "center">
@@ -18,11 +30,60 @@
     		</ul>
 </nav>
 <div class = "welcome" style = "center">
+<h1 style = "font-family: Georgia, Times, serif;font-weight: 700px;font-size: 40px;color: gray;box-shadow: 10px 10px 5px #888888">Welcome! </h1>
 <h1> Welcome!</h1>
 <h2>Interested in even more resources? Interested in our mentor database, and accessing current high-schoolers, college students,
 and career professionals to help you on your education path? Sign up here!</h2>
-<p>Go to our <a href = "edify101.github.io/about">about</a> section to learn more about Edify101!</p>
 </div>
+      <!-- <span class="big">Blog</span> -->
+      <h6>Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>
+                       <p></p>
+                        <form class="form-horizontal">
+                          <div class="emailform">
+                            <label for="inputName" class="col-sm-2 control-label">Your Name</label>
+                            <div class="col-sm-10">
+                              <input ng-model="EmailCtrl.Name" type="text" class="form-control" id="inputName" placeholder="Name" required>
+                            </div>
+                          </div>
+                          <div class="emailform">
+                            <label for="inputEmail" class="col-sm-2 control-label">Your Email Address</label>
+                            <div class="col-sm-10">
+                              <input ng-model="EmailCtrl.From" type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                            </div>
+                          </div>
+                          <div class="emailform">
+                            <label class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-10">
+                              <textarea class="form-control" rows="5" ng-model="EmailCtrl.Message"></textarea>
+                            </div>
+                          </div>
+                          <div class="emailform">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Send Email!</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.js">
+        </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.scrollstop.js"></script>
+    <script src="js/jquery.scrollsnap.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).scrollsnap({
+            snaps: '.page',
+            proximity: 400
+        });
+    });
+    </script>
 </body>
 </html>
 
