@@ -28,7 +28,7 @@ We need mentors, and you can get community service hours! We need sponsors, and 
 </p>
 <div class = "bios">
 <div class = "img">
-<img src = "https://www.facebook.com/photo.php?fbid=10154067870850471&set=t.1374452524&type=3&theater">
+<img src = "https://www.linkedin.com/profile/view?id=212567912&trk=hp-identity-photo">
 </div>
 <div class = "bio">
 <p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. 
