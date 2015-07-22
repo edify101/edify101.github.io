@@ -348,6 +348,11 @@ h6 {
     background: #EA7B00;
     color: #fff;
 }
+
+#emailform li {
+	list-style-type: none;
+
+}
 </style>
 
 </script>
@@ -373,11 +378,11 @@ h6 {
 <center>
 <form>
 <ul class="form-style-1">
-    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-       <li><label>Email <span class="required">*</span></label>
+    <li id = "emailform"><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+       <li id = "emailform"><label>Email <span class="required">*</span></label>
         <input type="email" name="field3" class="field-long" />
    	</li> 
-   	<li>
+   	<li id = "emailform">
         <label>Subject</label>
         <select name="field4" class="field-select">
         <option value="mentor">Be a mentor!</option>
@@ -386,11 +391,11 @@ h6 {
         <option value = "sponsorship/partnership">Sponsor? Partner?</option>
         </select>
     	</li>
-    	<li>
+    	<li id="emailform">
         <label>Your Message <span class="required">*</span></label>
         <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
         </li>
-        <li>
+        <li id = "emailform">
         <input type="submit" value="Submit" />
         </li>
 </ul>
