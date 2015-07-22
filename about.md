@@ -67,7 +67,8 @@ We need mentors, and you can get community service hours! We need sponsors, and 
 </p>
 </div>
 <div class = "bio">
-<img src = "http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/245540/http_s3_amazonaws_com_feather-files-aviary-prod-us-east-1_f5da8ea5e_2015-01-12_beb83bf3a260466da6fd128aa084d892_ytzobj.png" alt = "Rachel" class = "img-circle" width = "200" height = "200" box-shadow = "7px 7px 8px #000000"
+<img src = "https://camo.githubusercontent.com/5d02b242b78db14464ba1bfc7b39b0167d3e3bf0/687474703a2f2f7265732e636c6f7564696e6172792e636f6d2f6872736379777634702f696d6167652f75706c6f61642f635f6c696d69742c665f6175746f2c685f3534302c715f38302c775f3732302f76312f3234353534302f687474705f73335f616d617a6f6e6177735f636f6d5f666561746865722d66696c65732d6176696172792d70726f642d75732d656173742d315f6635646138656135655f323031352d30312d31325f62656238336266336132363034363664613666643132386161303834643839325f79747a6f626a2e706e67" alt = "Rachel" class = "img-circle" width = "200" height = "200" box-shadow = "7px 7px 8px #000000">
+<!--"http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/245540/http_s3_amazonaws_com_feather-files-aviary-prod-us-east-1_f5da8ea5e_2015-01-12_beb83bf3a260466da6fd128aa084d892_ytzobj.png"-->
 <p>
 Rachel Xu is first-year student and potential computer science major at Bryn Mawr. She has been teaching herself programming languages including Python, Java, R etc and enjoys solving bioinformatics problems on Rosalind.
 </p>
