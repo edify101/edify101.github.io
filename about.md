@@ -6,6 +6,23 @@ permalink: /about/
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
 <style>
+table {
+		border-collapse: collapse;
+		border: 1px solid #124412;
+		width: 600px;
+	}
+	th {
+		border: 1px solid #124412;
+		background-color: #334f33;
+		color: #fff;
+		padding: 0.4em;
+		text-align: left;
+	}
+	td {
+		padding: 0.4em;
+	}
+	tr.odd td {
+		background-color: #86B486;
 .bios {
 <!--display: inline-block;-->
     <!--margin: 0 40px 0 0;-->
