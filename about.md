@@ -5,6 +5,12 @@ permalink: /about/
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
+<style>
+.bios {
+display: inline-block;
+    margin: 0 40px 0 0;
+    }
+</style>
 </head>
 <body>
 <p>
