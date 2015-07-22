@@ -13,6 +13,13 @@ permalink: /
 <meta name="author" content="Lizzie Siegle">
 <meta http-equiv="refresh" content="30">
  <script language = "Javascript" type = "text/javascript">
+ document.createElement('header');
+		document.createElement('nav');
+		document.createElement('article');
+		document.createElement('footer');
+		document.createElement('section');
+		document.createElement('video');
+			
         // function welcomePopUp() {
         //     window.open();
         //     alert('Welcome to Edify101!')
@@ -23,6 +30,29 @@ permalink: /
         // }
 
     </script>
+    
+    <script type="text/javascript" src="js/jquery-ui-1.8.9.custom.min.js" charset="utf-8"></script>   
+    <script type="text/javascript" src="js/raphael-min.js" charset="utf-8"></script>
+    
+    <script type="text/javascript">
+    	var standalonePage = false;
+     	if ( $.browser.msie && parseInt($.browser.version) <=7) {
+  			location.replace('http://www.neotokio.it/ie.html');
+		}
+     </script>
+    
+    <script src="js/pageObject.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+    	document.write('<script type="text/javascript"');
+        document.write('src="http://maps.google.it/maps/api/js?sensor=false&region=IT&language=en">');
+    	 document.write('<\/script>');
+    </script>
+    
+	<script src="js/google_maps.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="js/main.js"></script>
+  
     <style>
     
 blockquote {
@@ -32,10 +62,12 @@ blockquote {
 
 h6 {
  color: #FFEBCD;
+ size: 25em;
 }
 
 .emailform {
  color:#FFEBCD;
+ size: 25em;
 }
 
 </script>
@@ -44,7 +76,7 @@ h6 {
 
 <body>
 <div class = "welcome" style = "center">
-<!--<blockquote> Edify-To instruct or improve (someone) intellectually </blockquote>-->
+<blockquote> Edify-To instruct or improve (someone) intellectually </blockquote>
 </div>
 
       <h6>Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>
