@@ -21,126 +21,85 @@ permalink: /
         //     window.open();
         //     alert('Have a nice day!')
         // }
-/*
-    Defining our variables
-    world and viewport are DOM elements,
-    worldXAngle and worldYAngle are floats that hold the world rotations,
-    d is an int that defines the distance of the world from the camera 
-*/
-var world = document.getElementById( 'world' ),
-    viewport = document.getElementById( 'viewport' ),
-    worldXAngle = 0,
-    worldYAngle = 0,
-    d = 0;
 
-/*
-    Event listener to transform mouse position into angles 
-    from -180 to 180 degress, both vertically and horizontally
-*/
-window.addEventListener( 'mousemove', function( e ) {
-    worldYAngle = -( .5 - ( e.clientX / window.innerWidth ) ) * 180;
-    worldXAngle = ( .5 - ( e.clientY / window.innerHeight ) ) * 180;
-    updateView();
-} );
-
-/*
-    Changes the transform property of world to be
-    translated in the Z axis by d pixels,
-    rotated in the X axis by worldXAngle degrees and
-    rotated in the Y axis by worldYAngle degrees.
-*/
-function updateView() {
-    world.style.transform = 'translateZ( ' + d + 'px ) \
-        rotateX( ' + worldXAngle + 'deg) \
-        rotateY( ' + worldYAngle + 'deg)';
-}
-/*
-    objects is an array of cloud bases
-    layers is an array of cloud layers
-*/
-var objects = [],
-    layers = [];
-
-/*
-    Clears the DOM of previous clouds bases 
-    and generates a new set of cloud bases
-*/
-function generate() {
-    objects = [];
-    layers = [];
-    if ( world.hasChildNodes() ) {
-        while ( world.childNodes.length >= 1 ) {
-            world.removeChild( world.firstChild );       
-        } 
-    }
-    for( var j = 0; j <; 5; j++ ) {
-        objects.push( createCloud() );
-    }
-}
-
-/*
-    Creates a single cloud base: a div in world
-    that is translated randomly into world space.
-    Each axis goes from -256 to 256 pixels.
-*/
-function createCloud() {
-
-    var div = document.createElement( 'div'  );
-    div.className = 'cloudBase';
-    var t = 'translateX( ' + random_x + 'px ) \
-        translateY( ' + random_y + 'px ) \
-        translateZ( ' + random_z + 'px )';
-    div.style.transform = t;
-    world.appendChild( div );
-    
-    for( var j = 0; j < 5 + Math.round( Math.random() * 10 ); j++ ) {
-        var cloud = document.createElement( 'div' );
-        cloud.className = 'cloudLayer';
-        
-        cloud.data = { 
-            x: random_x,
-            y: random_y,
-            z: random_z,
-            a: random_a,
-            s: random_s
-        };
-        var t = 'translateX( ' + random_x + 'px ) \
-            translateY( ' + random_y + 'px ) \
-            translateZ( ' + random_z + 'px ) \
-            rotateZ( ' + random_a + 'deg ) \
-            scale( ' + random_s + ' )';
-        cloud.style.transform = t;
-        
-        div.appendChild( cloud );
-        layers.push( cloud );
-    }
-    
-    return div;
-}
-/*
-    Iterate layers[], update the rotation and apply the
-    inverse transformation currently applied to the world.
-    Notice the order in which rotations are applied.
-*/
-function update (){
-        
-    for( var j = 0; j < layers.length; j++ ) {
-        var layer = layers[ j ];
-        layer.data.a += layer.data.speed;
-        var t = 'translateX( ' + layer.data.x + 'px ) \
-            translateY( ' + layer.data.y + 'px ) \
-            translateZ( ' + layer.data.z + 'px ) \
-            rotateY( ' + ( - worldYAngle ) + 'deg ) \
-            rotateX( ' + ( - worldXAngle ) + 'deg ) \
-            scale( ' + layer.data.s + ')';
-        layer.style.transform = t;
-    }
-    
-    requestAnimationFrame( update );
-    
-}
     </script>
     <style>
+    .rw-wrapper{
+	width: 80%;
+	position: relative;
+	margin: 110px auto 0 auto;
+	font-family: 'Bree Serif';
+	padding: 10px;
+}
+
+.rw-sentence{
+	margin: 0;
+	text-align: left;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+
+.rw-sentence span{
+	color: #444;
+	white-space: nowrap;
+	font-size: 200%;
+	font-weight: normal;
+}
+
+.rw-words{
+	display: inline;
+	text-indent: 10px;
+}
+
+.rw-words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	width: 100%;
+	color: #6b969d;
+}
+
+.rw-words-1 span{
+	animation: rotateWordsFirst 18s linear infinite 0s;
+}
+.rw-words-2 span{
+	animation: rotateWordsSecond 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: #6b889d;
+}
+.rw-words span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: #6b739d;	
+}
+.rw-words span:nth-child(4) { 
+	animation-delay: 9s; 
+	color: #7a6b9d;
+}
+.rw-words span:nth-child(5) { 
+	animation-delay: 12s; 
+	color: #8d6b9d;
+}
+.rw-words span:nth-child(6) {  
+	animation-delay: 15s; 
+	color: #9b6b9d;
+}
+
+@keyframes rotateWordsFirst {
+    0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+    8% { opacity: 1; height: 60px; }
+    19% { opacity: 1; height: 60px; }
+	25% { opacity: 0; height: 60px; }
+    100% { opacity: 0; }
+}
+
+@keyframes rotateWordsSecond {
+    0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
+    10% { opacity: 0.3; width: 0px; }
+	20% { opacity: 1; width: 100%; }
+    27% { opacity: 0; width: 100%; }
+    100% { opacity: 0; }
+}
 blockquote {
  color:#6495ED;
  size: 90em;
@@ -156,55 +115,38 @@ h6 {
  size: 20em;
 }
 
-#viewport {
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    perspective: 400; 
-    position: absolute;
-    right: 0;
-    top: 0;
-}
 
-#world {
-    height: 512px;
-    left: 50%;
-    margin-left: -256px;
-    margin-top: -256px;
-    position: absolute;
-    top: 50%;
-    transform-style: preserve-3d;
-    width: 512px;
-}
-.cloudBase {
-    height: 20px;
-    left: 256px;
-    margin-left: -10px;
-    margin-top: -10px;
-    position: absolute;
-    top: 256px;
-    width: 20px;
-}
-.cloudLayer {
-    height: 256px;
-    left: 50%;
-    margin-left: -128px;
-    margin-top: -128px;
-    position: absolute;
-    top: 50%;
-    width: 256px;
-}
     </style>
 </head>
 
 <body>
 <div class = "welcome" style = "center">
-<blockquote> Edify-To instruct or improve (someone) intellectually </blockquote>
+<!--<blockquote> Edify-To instruct or improve (someone) intellectually </blockquote>-->
 </div>
-
-<div id="viewport" >
-    <div id="world" ></div>
-</div>
+<section class="rw-wrapper">
+	<h2 class="rw-sentence">
+		<span>Edify-</span>
+		<span>to instruct or improve intellectually</span>
+		<div class="rw-words rw-words-1">
+			<span>Nothing worth having comes easy</span>
+			<span>College is possible!</span>
+			<span>Passion</span>
+			<span>Mentor</span>
+			<span>Inspire</span>
+			<span>Aspire</span>
+		</div>
+		<br />
+		<span>Dream</span>
+		<div class="rw-words rw-words-2">
+			<span>Set goals</span>
+			<span>Take risks</span>
+			<span>Volunteer in the community</span>
+			<span>Take time for yourself</span>
+			<span>Balance is key</span>
+			<span>Prepare for each test!</span>
+		</div>
+	</h2>
+</section>
 
       <h6>Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>
                        <p></p>
