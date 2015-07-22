@@ -21,191 +21,178 @@ permalink: /
         //     window.open();
         //     alert('Have a nice day!')
         // }
+/*
+    Defining our variables
+    world and viewport are DOM elements,
+    worldXAngle and worldYAngle are floats that hold the world rotations,
+    d is an int that defines the distance of the world from the camera 
+*/
+var world = document.getElementById( 'world' ),
+    viewport = document.getElementById( 'viewport' ),
+    worldXAngle = 0,
+    worldYAngle = 0,
+    d = 0;
 
+/*
+    Event listener to transform mouse position into angles 
+    from -180 to 180 degress, both vertically and horizontally
+*/
+window.addEventListener( 'mousemove', function( e ) {
+    worldYAngle = -( .5 - ( e.clientX / window.innerWidth ) ) * 180;
+    worldXAngle = ( .5 - ( e.clientY / window.innerHeight ) ) * 180;
+    updateView();
+} );
+
+/*
+    Changes the transform property of world to be
+    translated in the Z axis by d pixels,
+    rotated in the X axis by worldXAngle degrees and
+    rotated in the Y axis by worldYAngle degrees.
+*/
+function updateView() {
+    world.style.transform = 'translateZ( ' + d + 'px ) \
+        rotateX( ' + worldXAngle + 'deg) \
+        rotateY( ' + worldYAngle + 'deg)';
+}
+/*
+    objects is an array of cloud bases
+    layers is an array of cloud layers
+*/
+var objects = [],
+    layers = [];
+
+/*
+    Clears the DOM of previous clouds bases 
+    and generates a new set of cloud bases
+*/
+function generate() {
+    objects = [];
+    layers = [];
+    if ( world.hasChildNodes() ) {
+        while ( world.childNodes.length >= 1 ) {
+            world.removeChild( world.firstChild );       
+        } 
+    }
+    for( var j = 0; j <; 5; j++ ) {
+        objects.push( createCloud() );
+    }
+}
+
+/*
+    Creates a single cloud base: a div in world
+    that is translated randomly into world space.
+    Each axis goes from -256 to 256 pixels.
+*/
+function createCloud() {
+
+    var div = document.createElement( 'div'  );
+    div.className = 'cloudBase';
+    var t = 'translateX( ' + random_x + 'px ) \
+        translateY( ' + random_y + 'px ) \
+        translateZ( ' + random_z + 'px )';
+    div.style.transform = t;
+    world.appendChild( div );
+    
+    for( var j = 0; j < 5 + Math.round( Math.random() * 10 ); j++ ) {
+        var cloud = document.createElement( 'div' );
+        cloud.className = 'cloudLayer';
+        
+        cloud.data = { 
+            x: random_x,
+            y: random_y,
+            z: random_z,
+            a: random_a,
+            s: random_s
+        };
+        var t = 'translateX( ' + random_x + 'px ) \
+            translateY( ' + random_y + 'px ) \
+            translateZ( ' + random_z + 'px ) \
+            rotateZ( ' + random_a + 'deg ) \
+            scale( ' + random_s + ' )';
+        cloud.style.transform = t;
+        
+        div.appendChild( cloud );
+        layers.push( cloud );
+    }
+    
+    return div;
+}
+/*
+    Iterate layers[], update the rotation and apply the
+    inverse transformation currently applied to the world.
+    Notice the order in which rotations are applied.
+*/
+function update (){
+        
+    for( var j = 0; j < layers.length; j++ ) {
+        var layer = layers[ j ];
+        layer.data.a += layer.data.speed;
+        var t = 'translateX( ' + layer.data.x + 'px ) \
+            translateY( ' + layer.data.y + 'px ) \
+            translateZ( ' + layer.data.z + 'px ) \
+            rotateY( ' + ( - worldYAngle ) + 'deg ) \
+            rotateX( ' + ( - worldXAngle ) + 'deg ) \
+            scale( ' + layer.data.s + ')';
+        layer.style.transform = t;
+    }
+    
+    requestAnimationFrame( update );
+    
+}
     </script>
     <style>
-    @import url(http://fonts.googleapis.com/css?family=Lato:300);
-
-html,
-body {
-  min-height: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  background: #404853;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-li {
-  list-style-type: none;
-}
-
-/*=================================== container 
-*/
-
-.hexagon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -30px;
-  margin-left: -30px;
-  width: 60px;
-  transform-origin: center;
-  transform: scale(1.00005); /* hack Firefox smooth edge */
-}
-
-/*=================================== top and bottom triangle
-*/
-
-.polygon_top,
-.polygon_bottom {
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  position: absolute;
-  width: 0;
-  height: 0;
-  transition: width 0.3s ease-in-out, border 0.1s linear, border-radius 0.5s ease-in-out;
-}
-
-.polygon_top a,
-.polygon_bottom a {
-  color: rgba(55, 55, 55, 0);
-  display: block;
-  font-size: 0em;
-  text-transform: uppercase;
-  width: 100%;
-  transition: color, font-size 0.3s;
-}
-
-.polygon_top:nth-child(1),
-.polygon_top:nth-child(3),
-.polygon_bottom:nth-child(4),
-.polygon_bottom:nth-child(6) {
-  cursor: pointer;
-}
-
-.polygon_top:nth-child(1):hover > a,
-.polygon_top:nth-child(3):hover > a,
-.polygon_bottom:nth-child(4):hover > a,
-.polygon_bottom:nth-child(6):hover > a {
-  color: #373737;
-  font-size: 1em;
-}
-
-.polygon_top:nth-child(1) {
-  border-bottom: 30px solid #9b59b6;
-  right: 0;
-  transform: translateX(-30px) translateY(-15px);
-}
-
-.polygon_top:nth-child(1):hover {
-  border-radius: 4px 0 0 4px;
-  border-left: 18px solid #9b59b6;
-  width: 120px;
-  z-index: 100;
-}
-.polygon_top:nth-child(1) > a {
-  line-height: 30px;
-}
-
-.polygon_top:nth-child(2) {
-  border-bottom: 30px solid #d0b2dd;
-  transform: translateX(12px) translateY(15px);
-}
-
-.polygon_top:nth-child(3) {
-  border-bottom: 30px solid #b07cc6;
-  left: 0;
-  transform: translateX(30px) translateY(-15px);
-}
-
-.polygon_top:nth-child(3):hover {
-  border-radius: 0 4px 4px 0;
-  border-right: 18px solid #b07cc6;
-  width: 120px;
-  z-index: 100;
-}
-
-.polygon_top:nth-child(3) > a {
-  text-align: right;
-  line-height: 30px;
-}
-
-.polygon_bottom:nth-child(4) {
-  border-top: 30px solid #dbc3e5;
-  right: 0;
-  transform: translateX(-30px) translateY(15px);
-}
-
-.polygon_bottom:nth-child(4):hover {
-  border-radius: 4px 0 0 4px;
-  border-left: 18px solid #dbc3e5;
-  width: 120px;
-  z-index: 100;
-}
-
-.polygon_bottom:nth-child(4) > a {
-  text-align: left;
-  line-height: 30px;
-  margin-top: -30px;
-}
-
-.polygon_bottom:nth-child(5) {
-  border-top: 30px solid #a66bbe;
-  transform: translateX(12px) translateY(-15px);
-}
-
-.polygon_bottom:nth-child(6) {
-  border-top: 30px solid #c6a0d5;
-  transform: translateX(30px) translateY(15px);
-}
-
-.polygon_bottom:nth-child(6):hover {
-  border-radius: 0 4px 4px 0;
-  border-right: 18px solid #c6a0d5;
-  width: 120px;
-  z-index: 100;
-}
-
-.polygon_bottom:nth-child(6) > a {
-  text-align: right;
-  line-height: 30px;
-  margin-top: -30px;
-}
-
-p{
-  color: #666;
-  cursor:default;
-  font-size:0.8em;
-  margin-top:5em;
-  user-select: none;
-}
-
 blockquote {
  color:#6495ED;
- size: 35em;
+ size: 90em;
 }
 
 h6 {
  color: #FFEBCD;
- size: 18em;
+ size: 40em;
 }
 
 .emailform {
  color:#FFEBCD;
- size: 12em;
+ size: 20em;
+}
+
+#viewport {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    perspective: 400; 
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#world {
+    height: 512px;
+    left: 50%;
+    margin-left: -256px;
+    margin-top: -256px;
+    position: absolute;
+    top: 50%;
+    transform-style: preserve-3d;
+    width: 512px;
+}
+.cloudBase {
+    height: 20px;
+    left: 256px;
+    margin-left: -10px;
+    margin-top: -10px;
+    position: absolute;
+    top: 256px;
+    width: 20px;
+}
+.cloudLayer {
+    height: 256px;
+    left: 50%;
+    margin-left: -128px;
+    margin-top: -128px;
+    position: absolute;
+    top: 50%;
+    width: 256px;
 }
     </style>
 </head>
@@ -214,30 +201,11 @@ h6 {
 <div class = "welcome" style = "center">
 <blockquote> Edify-To instruct or improve (someone) intellectually </blockquote>
 </div>
-      <!-- 
-autor: Marco Barría 
-https://twitter.com/marco_bf
--->
 
-<div class='hexagon'>
-  <ul>
-    <li class='polygon_top'>
-      <a href="#">Cssdeck</a>
-    </li>
-    <li class='polygon_top'></li>
-    <li class='polygon_top'>
-      <a href="#">Inspire</a>
-    </li>
-    <li class='polygon_bottom'>
-      <a href="#">Mentor</a>
-    </li>
-    <li class='polygon_bottom'></li>
-    <li class='polygon_bottom'>
-      <a href="#">Edify</a>
-    </li>
-  </ul>
-  <p>Hover me!</p>
+<div id="viewport" >
+    <div id="world" ></div>
 </div>
+
       <h6>Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>
                        <p></p>
                         <form class="form-horizontal">
