@@ -98,7 +98,7 @@ permalink: /login/
     100%{	box-shadow:0 0 1px #008aff;}
 }
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </style>
 </head>
 <body>
