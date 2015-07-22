@@ -266,12 +266,13 @@ h6 {
 /* overflow: auto;*/
 /*}*/
 <style type="text/css">
-.form-style-2{
+.form-style-1{
     max-width: 500px;
     padding: 20px 12px 10px 20px;
     font: 13px Arial, Helvetica, sans-serif;
+    list-style-type: none;
 }
-.form-style-2-heading{
+.form-style-1-heading{
     font-weight: bold;
     font-style: italic;
     border-bottom: 2px solid #ddd;
@@ -279,33 +280,33 @@ h6 {
     font-size: 15px;
     padding-bottom: 3px;
 }
-.form-style-2 label{
+.form-style-1 label{
     display: block;
     margin: 0px 0px 15px 0px;
 }
-.form-style-2 label > span{
+.form-style-1 label > span{
     width: 100px;
     font-weight: bold;
     float: left;
     padding-top: 8px;
     padding-right: 5px;
 }
-.form-style-2 span.required{
+.form-style-1 span.required{
     color:red;
 }
 .form-style-2 .tel-number-field{
     width: 40px;
     text-align: center;
 }
-.form-style-2 input.input-field{
+.form-style-1 input.input-field{
     width: 48%;
     
 }
 
-.form-style-2 input.input-field, 
-.form-style-2 .tel-number-field, 
-.form-style-2 .textarea-field, 
- .form-style-2 .select-field{
+.form-style-1 input.input-field, 
+.form-style-1 .tel-number-field, 
+.form-style-1 .textarea-field, 
+ .form-style-1 .select-field{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -319,18 +320,18 @@ h6 {
     padding: 7px;
     outline: none;
 }
-.form-style-2 .input-field:focus, 
-.form-style-2 .tel-number-field:focus, 
-.form-style-2 .textarea-field:focus,  
-.form-style-2 .select-field:focus{
+.form-style-1 .input-field:focus, 
+.form-style-1 .tel-number-field:focus, 
+.form-style-1 .textarea-field:focus,  
+.form-style-1 .select-field:focus{
     border: 1px solid #0C0;
 }
-.form-style-2 .textarea-field{
+.form-style-1 .textarea-field{
     height:100px;
     width: 55%;
 }
-.form-style-2 input[type=submit],
-.form-style-2 input[type=button]{
+.form-style-1 input[type=submit],
+.form-style-1 input[type=button]{
     border: none;
     padding: 8px 15px 8px 15px;
     background: #FF8500;
@@ -342,8 +343,8 @@ h6 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.form-style-2 input[type=submit]:hover,
-.form-style-2 input[type=button]:hover{
+.form-style-1 input[type=submit]:hover,
+.form-style-1 input[type=button]:hover{
     background: #EA7B00;
     color: #fff;
 }
@@ -370,43 +371,13 @@ h6 {
 <blockquote style = "center"><i>"Shoot for the moon. Even if you miss, you'll land among the stars."</i></blockquote>
 </div>
 <center>
-      <!--<h6 style = "center">Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>-->
-        <!--                <form class="form-horizontal">-->
-        <!--                  <div class="emailform" style = "center">-->
-        <!--                    <label for="inputName" class="col-sm-2 control-label">Your Name</label>-->
-        <!--                    <div class="col-sm-10">-->
-        <!--                      <input ng-model="EmailCtrl.Name" type="text" class="form-control" id="inputName" placeholder="Name" required>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-        <!--                  <div class="emailform">-->
-        <!--                    <label for="inputEmail" class="col-sm-2 control-label">Your Email Address</label>-->
-        <!--                    <div class="col-sm-10">-->
-        <!--                      <input ng-model="EmailCtrl.From" type="email" class="form-control" id="inputEmail" placeholder="Email" required>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-        <!--                  <div class="emailform">-->
-        <!--                    <label class="col-sm-2 control-label">Message</label>-->
-        <!--                    <div class="col-sm-10">-->
-        <!--                      <textarea class="form-control" rows="5" ng-model="EmailCtrl.Message"></textarea>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-        <!--                  <div class="emailform">-->
-        <!--                    <div class="col-sm-offset-2 col-sm-10">-->
-        <!--                      <button type="submit" class="btn btn-default">Send Email!</button>-->
-        <!--                    </div>-->
-        <!--                  </div>-->
-        <!--                </form>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
-        <!--</center>-->
-        <form>
+<form>
 <ul class="form-style-1">
-    <label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" />
-        <label>Email <span class="required">*</span></label>
+    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+       <li><label>Email <span class="required">*</span></label>
         <input type="email" name="field3" class="field-long" />
-   
+   	</li> 
+   	<li>
         <label>Subject</label>
         <select name="field4" class="field-select">
         <option value="mentor">Be a mentor!</option>
@@ -414,10 +385,14 @@ h6 {
         <option value="General Question">General question</option>
         <option value = "sponsorship/partnership">Sponsor? Partner?</option>
         </select>
-    
+    	</li>
+    	<li>
         <label>Your Message <span class="required">*</span></label>
         <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        </li>
+        <li>
         <input type="submit" value="Submit" />
+        </li>
 </ul>
 </form>
         <script src="js/jquery.js">
