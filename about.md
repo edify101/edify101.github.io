@@ -7,8 +7,12 @@ permalink: /about/
 <link rel="stylesheet" type="text/css" href="main.css">
 <style>
 .bios {
-display: inline-block;
-    margin: 0 40px 0 0;
+<!--display: inline-block;-->
+    <!--margin: 0 40px 0 0;-->
+    margin: auto;
+    width: 60%;
+    border:3px solid #8AC007;
+    padding: 10px;
     }
 </style>
 </head>
