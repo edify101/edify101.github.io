@@ -21,13 +21,26 @@ permalink: /
         //     window.open();
         //     alert('Have a nice day!')
         // }
+        $(document).ready(function(){
+    $(function(){
+      $(".content").addClass("setup");
+      var $typer = $(".term-text").typed({
+        strings: [
+          "Hi.",
+          "How are you?",
+          "Welcome to edify101.org",
+          "Serving, mentoring, aiding middle school students in Silicon Valley"],
+        cursorChar: "_",
+        typeSpeed: 20,
+        callback: function(){
+          $(".content").removeClass("setup");
+          $("#terminal").slideUp();
+          $("#intro-completed").show();
+        }
+      });
     </script>
     <style>
-  /*  .header {*/
-  /* moz-box-shadow: 3px 3px rgba(0,0,0,0.1);*/
-  /*webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);*/
-  /*box-shadow: 3px 3px rgba(0,0,0,0.1);*/
-  /*  }*/
+
     .header: hover {
 	background-color: green;
 	font-size: 135%;
@@ -40,20 +53,8 @@ permalink: /
 <!--<body onload = "welcomePopUp()" onunload = "goodByePopUp()">-->
 <!--</body>-->
 <body>
-<nav>
-	<!--<div class = "header">-->
- <!--   		<ul style = "center">-->
- <!--       		<li><a href="/">Home</a></li>-->
-	<!--        	<li><a href="/about">About</a></li>-->
- <!--       		<li><a href="/resources">Local, Educational Resources</a></li>-->
- <!--       		<li><a href="/login">Login</a></li>-->
- <!--   		</ul>-->
- <!--   	</div>-->
-</nav>
 <div class = "welcome" style = "center">
-<h1 style = "font-family: Georgia, Times, serif;color: gray;box-shadow: 10px 10px 5px #888888; size: 4">Welcome! </h1>
-<h2 style = "font-family: Georgia, Times, serif; color: gray; size: 3">Interested in even more resources? Interested in our mentor database, and accessing current high-schoolers, college students,
-and career professionals to help you on your education path? Sign up here!</h2>
+<blockquote>1. Edify-To instruct or improve (someone) intellectually </blockquote>
 </div>
       <!-- <span class="big">Blog</span> -->
       <h6>Contact us! This site is a work in progress, and, in the meantime, here is an easy way to get in touch. Or see the <a href="/about/">about</a> section.</h6>
