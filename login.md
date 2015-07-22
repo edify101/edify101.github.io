@@ -97,6 +97,8 @@ permalink: /login/
     50%{	box-shadow:0 0 10px #008aff;}
     100%{	box-shadow:0 0 1px #008aff;}
 }
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="test.js"></script>
 </style>
 </head>
 <body>
@@ -114,3 +116,4 @@ permalink: /login/
             </form>
         </div>
 </body>
+</html>
