@@ -21,12 +21,25 @@ permalink: /
         //     window.open();
         //     alert('Have a nice day!')
         // }
-        $(document).ready(function(){
+        Site = (function(){
+  var dob = new Date("3 December 2000 21:00:00");
+  var internDate = new Date("24 February 2015 00:00:00");
+
+  setInterval(function(){
+    var now = new Date();
+    var duration = now - dob;
+    var years = duration / 31556900000;
+
+    var majorMinor = years.toFixed(9).toString().split('.');
+    $age.text(majorMinor[0] + "." + majorMinor[1]);
+  }, 100);
+
+  $(document).ready(function(){
     $(function(){
       $(".content").addClass("setup");
       var $typer = $(".term-text").typed({
         strings: [
-          "Hi.",
+           "Hi.",
           "How are you?",
           "Welcome to edify101.org",
           "Serving, mentoring, aiding middle school students in Silicon Valley"],
@@ -38,6 +51,72 @@ permalink: /
           $("#intro-completed").show();
         }
       });
+
+      setTimeout(function(){
+        $("#term-skip").fadeIn();
+      }, 2000);
+
+      if(window.location.hash === "#skip"){
+        $(".content").removeClass("setup");
+        $("#terminal").slideUp();
+        $("#intro-completed").text("");
+      }
+
+      $("#term-skip").click(function(){
+        $(".content").removeClass("setup");
+        $("#terminal").slideUp();
+        $("#intro-completed").text("");
+      })
+    });
+
+    $age = $('#age');
+
+    if(new Date() < internDate){
+      $('#starting').text(", starting on February 24");
+      $('#internstatus').text("will be");
+    }else{
+      $('#internstatus').text("am");
+    }
+
+    var handler = StripeCheckout.configure({
+      key: 'pk_live_lUHrW5Ew681dVjezph8ZZpoB',
+      image: 'https://gravatar.com/avatar/eeadfdd648bb640c78cda62b675885cf?s=100',
+      token: function(token) { }
+    });
+
+    $('#donate').on('click', function(e) {
+      handler.open({
+        name: "Donation to Edify101",
+        description: "I wanted to implement the Stripe API somewhere.",
+        amount: 100
+      });
+      e.preventDefault();
+    });
+
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+  });
+}());
+
+load = function(data){
+  // Toggl
+  if(!data.toggl.current){
+    $("#project-tense").text("I was last");
+  }
+  $("#project").text(data.toggl.project);
+  $("#project-description").text(data.toggl.entry);
+  var lastUpdated = new Date(data.toggl.lastUpdated);
+  $("#project-last-updated").text((lastUpdated.getHours() > 12 ? (lastUpdated.getHours() - 12) : lastUpdated.getHours()) + ":" + (lastUpdated.getMinutes() < 10 ? ("0" + lastUpdated.getMinutes()) : lastUpdated.getMinutes()));
+
+  // Last.fm
+  if(data.lastfm.playing){
+    $("#music-tense").text("Here's what I'm listening to right now!");
+  }
+  $(".music-display").css("background-image", "url(" + data.lastfm.image + ")");
+  $("#music-track").text(data.lastfm.track);
+  $("#music-artist").text(data.lastfm.artist);
+}
     </script>
     <style>
 
