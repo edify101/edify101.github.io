@@ -28,14 +28,14 @@ We need mentors, and you can get community service hours! We need sponsors, and 
 </p>
 <div class = "bios">
 <div class = "img">
-<img src = "https://www.linkedin.com/profile/view?id=212567912&trk=hp-identity-photo">
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/018/1c0/19fb00a.jpg" class="img-circle" width="200" height="200" box-shadow= "7px 7px 8px #000000">
 </div>
 <div class = "bio">
 <p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. 
 </p>
 </div>
 <div class = "img">
-<img src = "https://www.facebook.com/photo.php?fbid=10202735220634195&set=a.1521887759704.77097.1009888444&type=1&theater">
+<img src = "https://pbs.twimg.com/profile_images/465642420932075520/dDI0LkTn.jpeg" class="img-circle" width="200" height="200" box-shadow= "7px 7px 8px #000000">
 </div>
 <div class = "bio">
 <p>Savannah attends Dartmouth, in Hanover, New Hampshire. She enjoys YouTube, attending hackathons, drawing, and DIY projects. Talk to her about comedians. 
