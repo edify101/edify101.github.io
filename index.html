@@ -25,17 +25,16 @@ body {
   height: 100%;
   overflow: hidden;
   display: flex;
-  
   background: black;
   color: #ccc;
 }
 
 .movingPlanets {
-padding: 200px;
+/*was 200px*/
+padding: 150px;
 justify-content: center;
 align-items: center;
 }
-
 
 html::before,
 html::after,
@@ -43,7 +42,8 @@ body::before,
 body::after {
   content: "";
   position: absolute;
-  top: 0;
+  /*top was 0*/
+  top: 8;
   left: 0;
   display: block;
   width: .5vmin;
