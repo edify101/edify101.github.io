@@ -13,7 +13,12 @@ permalink: /
 <meta name="author" content="Lizzie Siegle">
 <meta http-equiv="refresh" content="30">
  <script language = "Javascript" type = "text/javascript">
-			
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+</script>		
         // function welcomePopUp() {
         //     window.open();
         //     alert('Welcome to Edify101!')
@@ -208,7 +213,7 @@ em {
 }
 
 em.planet {
-  -webkit-animation: planet-rotate 12s linear infinite;
+  webkit-animation: planet-rotate 12s linear infinite;
   animation: planet-rotate 9s linear infinite;
   position: relative;
 }
@@ -231,7 +236,7 @@ em.planet.left {
 }
 
 em.planet.right {
-  -webkit-transform-origin: -20vmin 5vmin;
+  webkit-transform-origin: -20vmin 5vmin;
   transform-origin: -20vmin 5vmin;
 }
 
@@ -285,115 +290,9 @@ h6 {
 /* text-align: center;*/
 /* overflow: auto;*/
 /*}*/
-<style type="text/css">
-.form-style-2{
-    max-width: 500px;
-    padding: 20px 12px 10px 20px;
-    font: 13px Arial, Helvetica, sans-serif;
-    list-style-type: none;
-}
-.form-style-2-heading{
-    font-weight: bold;
-    font-style: italic;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-    font-size: 15px;
-    padding-bottom: 3px;
-    list-style-type: none;
-}
-.form-style-2 label{
-    display: block;
-    margin: 0px 0px 15px 0px;
-    list-style-type: none;
-}
-.form-style-2 label > span{
-    width: 100px;
-    font-weight: bold;
-    float: left;
-    padding-top: 8px;
-    padding-right: 5px;
-    list-style-type: none;
-}
-.form-style-2 span.required{
-    color:red;
-    list-style-type: none;
-}
-.form-style-2 .tel-number-field{
-    width: 40px;
-    text-align: center;
-    list-style-type: none;
-}
-.form-style-2 input.input-field{
-    width: 48%;
-    list-style-type: none;
-    
-}
 
-.form-style-2 input.input-field, 
-.form-style-2 .tel-number-field, 
-.form-style-2.textarea-field, 
- .form-style-2 .select-field{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px 1px 4px #EBEBEB;
-    -moz-box-shadow: 1px 1px 4px #EBEBEB;
-    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    padding: 7px;
-    outline: none;
+   
 }
-.form-style-2 .input-field:focus, 
-.form-style-2 .tel-number-field:focus, 
-.form-style-2 .textarea-field:focus,  
-.form-style-2 .select-field:focus{
-    border: 1px solid #0C0;
-}
-.form-style-2 .textarea-field{
-    height:100px;
-    width: 55%;
-}
-.form-style-2 input[type=submit],
-.form-style-2 input[type=button]{
-    border: none;
-    padding: 8px 15px 8px 15px;
-    background: #FF8500;
-    color: #fff;
-    box-shadow: 1px 1px 4px #DADADA;
-    -moz-box-shadow: 1px 1px 4px #DADADA;
-    -webkit-box-shadow: 1px 1px 4px #DADADA;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    list-style-type: none;
-}
-.form-style-1 input[type=submit]:hover,
-.form-style-1 input[type=button]:hover{
-    background: #EA7B00;
-    color: #fff;
-    list-style-type: none;
-}
-
-#emailform li {
-	list-style-type: none;
-	float: left;
-	height: 100px;
-	width: 100px;
-	right: 50px;
-	padding-top: 100px;
-}
-
-#emailform > span {
-	color: black;
-}
-
-#container {
-	width: 1000px;
-}
-</style>
 
 </script>
     </style>
@@ -409,37 +308,26 @@ h6 {
   <em>I</em>
   <em>F</em>
   <em class = "planet right">Y</em>
-  <em class>101</em>
+  <em>101</em>
 </h1>
 </div>
 <div class = "welcome">      
 <!--<blockquote style="center"> Edify-To instruct or improve (someone) intellectually </blockquote>-->
-<blockquote style = "center"><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
+<blockquote><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
 </div>
 <center>
-<form>
-<ul class="form-style-1">
-    <li id = "emailform"><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-       <li id = "emailform"><label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="field-long" />
-   	</li> 
-   	<li id = "emailform">
-        <label>Subject</label>
-        <select name="field4" class="field-select">
-        <option value="mentor">Be a mentor!</option>
-        <option value="mentee">Be a mentee!</option>
-        <option value="General Question">General question</option>
-        <option value = "sponsorship/partnership">Sponsor? Partner?</option>
-        </select>
-    	</li>
-    	<li id="emailform">
-        <label>Your Message <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-        </li>
-        <li id = "emailform">
-        <input type="submit" value="Submit" />
-        </li>
-</ul>
+<form method="post" name="contact_form"
+action="contact-form-handler.php">
+    Your Name:
+    <input type="text" name="name">
+ 
+    Email Address:
+    <input type="text" name="email">
+ 
+    Message:
+    <textarea name="message"></textarea>
+ 
+    <input type="submit" value="Submit">
 </form>
 </div>
 
