@@ -16,7 +16,7 @@ font-size: 19px;
 }
 </style>
 <body>
-<iframe frameborder=0 style="width:100%;height:500px" src="//www.zeemaps.com/pub?group=1553569&legend=1&locate=1&list=1&simpleadd=1&x=-122.178118&y=37.489615&z=5"> </iframe>
+<iframe frameborder=0 style="width:100%;height:500px" src="//www.zeemaps.com/pub?group=1553569&legend=1&locate=1&list=1&simpleadd=1&x=-122.178118&y=37.489615&z=5">map</iframe>
 <h3>East Palo Alto area</h3>
 <div class = "extracurriculars">
 <h6>Extracurriculars</h6>
