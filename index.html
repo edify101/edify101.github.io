@@ -334,88 +334,27 @@ textarea {
 <!--<blockquote style="center"> Edify-To instruct or improve (someone) intellectually </blockquote>-->
 <blockquote><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
 </div>
-<center>
-	<form class="form-horizontal">
-                          <div class="emailform">
-                            <label for="inputName" class="col-sm-2 control-label">Your Name</label>
-                            <div class="col-sm-10">
-                              <input ng-model="EmailCtrl.Name" type="text" class="form-control" id="inputName" placeholder="Name" required>
-                            </div>
-                          </div>
-                          <div class="emailform">
-                            <label for="inputEmail" class="col-sm-2 control-label">Your Email Address</label>
-                            <div class="col-sm-10">
-                              <input ng-model="EmailCtrl.From" type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                            </div>
-                          </div>
-                          <div class="emailform">
-                            <label class="col-sm-2 control-label">Message</label>
-                            <div class="col-sm-10">
-                              <textarea class="form-control" rows="5" ng-model="EmailCtrl.Message"></textarea>
-                            </div>
-                          </div>
-                          <div class="emailform">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <button type="submit" class="btn btn-default">Send Email!</button>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
+<form class="mk-contact-form" method="post" novalidate="novalidate">
+				<input type="text" placeholder="Name*" required="required" id="contact_name" name="contact_name" class="text-input" value="" tabindex="565" />
+				<input type="email" required="required" placeholder="Email*" id="contact_email" name="contact_email" class="text-input" value="" tabindex="566"  />
+				<textarea placeholder="Message*" required="required" id="contact_content" name="contact_content" class="textarea" tabindex="567"></textarea>
+				
+								<input placeholder="Enter Captcha" type="text" name="captcha" class="captcha-form text-input full" required="required" autocomplete="off" />
+				<div class="btn-cont">
+                    <button tabindex="568" class="mk-progress-button mk-contact-button shop-flat-btn shop-skin-btn" data-style="move-up">
+                        <span class="mk-progress-button-content">Send</span>
+                        <span class="mk-progress">
+                            <span class="mk-progress-inner"></span>
+                        </span>
+                        <span class="state-success"><i class="mk-moon-checkmark"></i></span>
+                        <span class="state-error"><i class="mk-moon-close"></i></span>
+                    </button>
                 </div>
-            </div>
-        </div>
-        <script src="js/jquery.js">
-        </script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.scrollstop.js"></script>
-    <script src="js/jquery.scrollsnap.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $(document).scrollsnap({
-            snaps: '.page',
-            proximity: 400
-        });
-    });
-    </script>
-<!--<form method="post" name="contact_form"-->
-<!--action="contact-form-handler.php">-->
-<!-- <label>   Your Name:</label>-->
-<!--    <input type="text" name="name" placeholder = "your name">-->
- 
-<!--    <label>Email Address:</label>-->
-<!--    <input type="text" name="email" placeholder = "email">-->
- 
-<!--  <label> Message: </label> -->
-<!--    <textarea placeholder = "Message"></textarea>-->
- 
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->
-<!--</div>-->
-
-<!--<script  type="text/javascript"> var frmvalidator = new Validator("myform"); frmvalidator.addValidation("FirstName","req","Please enter your First Name"); frmvalidator.addValidation("FirstName","maxlen=20",        "Max length for FirstName is 20");  frmvalidator.addValidation("LastName","req"); frmvalidator.addValidation("LastName","maxlen=20");  frmvalidator.addValidation("Email","maxlen=50"); frmvalidator.addValidation("Email","req"); frmvalidator.addValidation("Email","email");  frmvalidator.addValidation("Phone","maxlen=50"); frmvalidator.addValidation("Phone","numeric");  frmvalidator.addValidation("Address","maxlen=50"); frmvalidator.addValidation("Country","dontselect=000"); -->
-<!--</script> -->
-
-<!--        <script src="js/jquery.js">-->
-<!--        </script>-->
-
-    <!-- Bootstrap Core JavaScript -->
-<!--    <script src="js/bootstrap.min.js"></script>-->
-
-<!--    <script src="js/jquery.easing.min.js"></script>-->
-<!--    <script src="js/jquery.scrollstop.js"></script>-->
-<!--    <script src="js/jquery.scrollsnap.js"></script>-->
-<!--    <script type="text/javascript">-->
-<!--    $(document).ready(function() {-->
-<!--        $(document).scrollsnap({-->
-<!--            snaps: '.page',-->
-<!--            proximity: 400-->
-<!--        });-->
-<!--    });-->
-<!--    </script>-->
+				<input type="hidden" value="lizzie.siegle@gmail.com" name="contact_to"/>
+			</form>
+			<div class="bottom-arrow"></div>
+		</div>
+	</div>
 </body>
 </html>
 
