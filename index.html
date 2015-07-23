@@ -13,20 +13,6 @@ permalink: /
 <meta name="author" content="Lizzie Siegle">
 <meta http-equiv="refresh" content="30">
 <script language="javascript">
-function checkemail(str) {
-	var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
-  var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$");
-  var isOK = !r1.test(str) && r2.test(str);
-  if (!isOK)
-  	alert('Invalid Email!');
-  return isOK;
- }
-
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
 </script>		
  <style>
     html {
@@ -293,31 +279,15 @@ textarea {
 	float: left;
 }
 
+.contactform {
+	display: inline-block;
+	float: left;
+}
+
     </style>
 </head>
 
 <body>
-<BODY OnLoad="initMouseEvents()">
-
-<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
-
-<!-- To use your own images, just put the necessary image -->
-<!-- tags (<img src="...">)  inside each DIV tag in this code -->
-
-<div id="sparks">
-<div id="sDiv0" style="position:absolute; visibility: hidden;"><font face="arial black" color="red">.</font></div>
-<div id="sDiv1" style="position:absolute; visibility: hidden;"><font face="arial black" color="yellow">.</font></div>
-<div id="sDiv2" style="position:absolute; visibility: hidden;"><font face="arial black" color="blue">.</font></div>
-<div id="sDiv3" style="position:absolute; visibility: hidden;"><font face="arial black" color="red">.</font></div>
-<div id="sDiv4" style="position:absolute; visibility: hidden;"><font face="arial black" color="orange">.</font></div>
-<div id="sDiv5" style="position:absolute; visibility: hidden;"><font face="arial black" color="white">.</font></div>
-<div id="sDiv6" style="position:absolute; visibility: hidden;"><font face="arial black" color="green">.</font></div>
-<div id="sDiv7" style="position:absolute; visibility: hidden;"><font face="arial black" color="skyblue">.</font></div>
-<div id="sDiv8" style="position:absolute; visibility: hidden;"><font face="arial black" color="yellow">.</font></div>
-<div id="sDiv9" style="position:absolute; visibility: hidden;"><font face="arial black" color="white">.</font></div>
-</div>
-
-
 <div id = "container"
 <div class = "movingPlanets">
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -334,15 +304,13 @@ textarea {
 <!--<blockquote style="center"> Edify-To instruct or improve (someone) intellectually </blockquote>-->
 <blockquote><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
 </div>
-<form class="mk-contact-form" method="post" novalidate="novalidate">
+<form class="contactform" method="post" novalidate="novalidate">
 				<input type="text" placeholder="Name*" required="required" id="contact_name" name="contact_name" class="text-input" value="" tabindex="565" />
 				<input type="email" required="required" placeholder="Email*" id="contact_email" name="contact_email" class="text-input" value="" tabindex="566"  />
 				<textarea placeholder="Message*" required="required" id="contact_content" name="contact_content" class="textarea" tabindex="567"></textarea>
-				
-								<input placeholder="Enter Captcha" type="text" name="captcha" class="captcha-form text-input full" required="required" autocomplete="off" />
 				<div class="btn-cont">
                     <button tabindex="568" class="mk-progress-button mk-contact-button shop-flat-btn shop-skin-btn" data-style="move-up">
-                        <span class="mk-progress-button-content">Send</span>
+                        <span class="send">Send</span>
                         <span class="mk-progress">
                             <span class="mk-progress-inner"></span>
                         </span>
