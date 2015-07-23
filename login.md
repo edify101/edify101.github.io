@@ -18,8 +18,8 @@ RE-PASSWORD:<input type="text" name="repassword" value=""></br>
 First name:<input type = "text" name = "first_name" value = ""></br>
 Last name: <input type = "text" name = "last_name" value = ""></br>
 City: <input type = "text" name = "city" value = ""></br>
-Zipcode: <input type = "text" name = "zipcode" value = "number"></br>
-Age: <input type = "text" name = "age" value = "number"></br>
+Zipcode: <input type = "text" name = "zipcode" value = ""></br>
+Age: <input type = "text" name = "age" value = ""></br>
 <input type="submit" name="submit" value="submit">
 </form>
 
