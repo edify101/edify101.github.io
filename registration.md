@@ -27,7 +27,6 @@ permalink: /registration/
 <!--ai ya-->
 <!--</body>-->
 <!--</html>-->
-<!doctype html>
 <html>
 
 	<head>
