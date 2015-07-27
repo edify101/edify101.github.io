@@ -56,3 +56,37 @@ catch(Exception $e){
 		'message' => $e->getMessage()
 	)));
 }
+
+if(isset($_GET['tkn'])){
+
+	// Is this a valid login token?
+	$user = User::findByToken($_GET['tkn']);
+
+	if($user){
+
+		// Yes! Login the user and redirect to the protected page.
+
+		$user->login();
+		redirect('protected.php');
+	}
+
+	// Invalid token. Redirect back to the login form.
+	redirect('index.php');
+}
+
+if(isset($_GET['logout'])){
+
+	$user = new User();
+
+	if($user->loggedIn()){
+		$user->logout();
+	}
+
+	redirect('index.php');
+}
+
+$user = new User();
+
+if($user->loggedIn()){
+	redirect('protected.php');
+}
