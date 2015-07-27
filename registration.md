@@ -27,7 +27,7 @@ permalink: /registration/
 <!--ai ya-->
 <!--</body>-->
 <!--</html>-->
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 	<head>
@@ -49,7 +49,7 @@ permalink: /registration/
 			<h1>Register</h1>
 			<input type="text" placeholder="your@email.com" name="email" autofocus />
 			<p>Enter your email address above and we will send <br />you a login link.</p>
-			<a href = "http://edify101.org/emailconf">Register</a>
+			<button><a href = "http://edify101.org/emailconf">Register</a></button>
 			<span></span>
 
 		</form>
