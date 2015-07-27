@@ -19,154 +19,142 @@ permalink: /
   margin: 0;
   height: 100%;
 }
-
 body {
   margin: 0;
   height: 100%;
   overflow: hidden;
   display: flex;
+  
   background: black;
   color: #ccc;
 }
-
 .movingPlanets {
-/*was 200px*/
-padding: 250px;
+padding: 200px;
 justify-content: center;
 align-items: center;
 }
-
 html::before,
 html::after,
 body::before,
 body::after {
   content: "";
   position: absolute;
-  /*top was 0*/
-  top: 4;
+  top: 0;
   left: 0;
   display: block;
   width: .5vmin;
-  /*height was .5min*/
-  height: .4vmin;
-  border-radius: 25%;
+  height: .5vmin;
+  border-radius: 50%;
   color: transparent;
 }
-
 html::before {
-  box-shadow: 89vw 59vh .3vmin rgba(255,255,255,.8),
-              -1vw 13vh .3vmin rgba(255,255,255,.8),
-              24vw 81vh .3vmin rgba(255,255,255,.8),
-              93vw 78vh .3vmin rgba(255,255,255,.8),
-              51vw 79vh .3vmin rgba(255,255,255,.8),
-              70vw 68vh .3vmin rgba(255,255,255,.8),
-              80vw 7vh .3vmin rgba(255,255,255,.8),
-              28vw 2vh .3vmin rgba(255,255,255,.8),
-              41vw 88vh .3vmin rgba(255,255,255,.8),
-              94vw 53vh .3vmin rgba(255,255,255,.8),
-              59vw 94vh .3vmin rgba(255,255,255,.8),
-              86vw 42vh .3vmin rgba(255,255,255,.8),
-              46vw 82vh .3vmin rgba(255,255,255,.8),
-              34vw 17vh .3vmin rgba(255,255,255,.8),
-              70vw -2vh .3vmin rgba(255,255,255,.8),
-              85vw 18vh .3vmin rgba(255,255,255,.8),
-              35vw -4vh .3vmin rgba(255,255,255,.8),
-              21vw 85vh .3vmin rgba(255,255,255,.8),
-              50vw 54vh .3vmin rgba(255,255,255,.8),
-              77vw 35vh .3vmin rgba(255,255,255,.8),
-              47vw 4vh .3vmin rgba(255,255,255,.8),
-              20vw 52vh .3vmin rgba(255,255,255,.8),
-              46vw 19vh .3vmin rgba(255,255,255,.8),
-              58vw 30vh .3vmin rgba(255,255,255,.8),
-              6vw 73vh .3vmin rgba(255,255,255,.8),
-              88vw 41vh .3vmin rgba(255,255,255,.8),
-              66vw 36vh .3vmin rgba(255,255,255,.8),
-              -2vw 49vh .3vmin rgba(255,255,255,.8),
-              -1vw 50vh .3vmin rgba(255,255,255,.8),
-              14vw 17vh .3vmin rgba(255,255,255,.8),
-              44vw 43vh .3vmin rgba(255,255,255,.8),
-              79vw 92vh .3vmin rgba(255,255,255,.8),
-              22vw 28vh .3vmin rgba(255,255,255,.8),
-              42vw 5vh .3vmin rgba(255,255,255,.8),
-              -2vw 9vh .3vmin rgba(255,255,255,.8),
-              25vw 59vh .3vmin rgba(255,255,255,.8),
-              13vw 86vh .3vmin rgba(255,255,255,.8),
-              74vw 5vh .3vmin rgba(255,255,255,.8),
-              11vw 35vh .3vmin rgba(255,255,255,.8),
-              86vw 1vh .3vmin rgba(255,255,255,.8);
+  box-shadow: 93vw 63vh .3vmin rgba(255,255,255,.8),
+              3vw 17vh .3vmin rgba(255,255,255,.8),
+              28vw 85vh .3vmin rgba(255,255,255,.8),
+              97vw 82vh .3vmin rgba(255,255,255,.8),
+              55vw 83vh .3vmin rgba(255,255,255,.8),
+              74vw 72vh .3vmin rgba(255,255,255,.8),
+              84vw 11vh .3vmin rgba(255,255,255,.8),
+              32vw 6vh .3vmin rgba(255,255,255,.8),
+              45vw 92vh .3vmin rgba(255,255,255,.8),
+              98vw 57vh .3vmin rgba(255,255,255,.8),
+              63vw 98vh .3vmin rgba(255,255,255,.8),
+              90vw 46vh .3vmin rgba(255,255,255,.8),
+              50vw 86vh .3vmin rgba(255,255,255,.8),
+              38vw 21vh .3vmin rgba(255,255,255,.8),
+              74vw 2vh .3vmin rgba(255,255,255,.8),
+              89vw 22vh .3vmin rgba(255,255,255,.8),
+              39vw 0vh .3vmin rgba(255,255,255,.8),
+              25vw 89vh .3vmin rgba(255,255,255,.8),
+              54vw 58vh .3vmin rgba(255,255,255,.8),
+              81vw 39vh .3vmin rgba(255,255,255,.8),
+              51vw 8vh .3vmin rgba(255,255,255,.8),
+              24vw 56vh .3vmin rgba(255,255,255,.8),
+              50vw 23vh .3vmin rgba(255,255,255,.8),
+              62vw 34vh .3vmin rgba(255,255,255,.8),
+              10vw 77vh .3vmin rgba(255,255,255,.8),
+              92vw 45vh .3vmin rgba(255,255,255,.8),
+              70vw 40vh .3vmin rgba(255,255,255,.8),
+              2vw 53vh .3vmin rgba(255,255,255,.8),
+              3vw 54vh .3vmin rgba(255,255,255,.8),
+              18vw 21vh .3vmin rgba(255,255,255,.8),
+              48vw 47vh .3vmin rgba(255,255,255,.8),
+              83vw 96vh .3vmin rgba(255,255,255,.8),
+              26vw 32vh .3vmin rgba(255,255,255,.8),
+              46vw 9vh .3vmin rgba(255,255,255,.8),
+              2vw 13vh .3vmin rgba(255,255,255,.8),
+              29vw 63vh .3vmin rgba(255,255,255,.8),
+              17vw 90vh .3vmin rgba(255,255,255,.8),
+              78vw 9vh .3vmin rgba(255,255,255,.8),
+              15vw 39vh .3vmin rgba(255,255,255,.8),
+              90vw 5vh .3vmin rgba(255,255,255,.8);
 }
-
-/*Didn't change vmin's or rgba */
 html::after { 
-  box-shadow: 63vw 31vh .2vmin .1vmin rgba(255,200,200,.8), 
-              85vw 9vh .2vmin .1vmin rgba(255,200,200,.8),
-              73vw 58vh .2vmin .1vmin rgba(255,200,200,.8),
-              -3vw 70vh .2vmin .1vmin rgba(255,200,200,.8),
-              34vw 11vh .2vmin .1vmin rgba(255,200,200,.8),
-              75vw 6vh .2vmin .1vmin rgba(255,200,200,.8),
-              12vw 43vh .2vmin .1vmin rgba(255,200,200,.8),
-              70vw 67vh .2vmin .1vmin rgba(255,200,200,.8),
-              26vw 92vh .2vmin .1vmin rgba(255,200,200,.8),
-              9vw 94vh .2vmin .1vmin rgba(255,200,200,.8),
-              5vw 36vh .2vmin .1vmin rgba(255,200,200,.8),
-              5vw 67vh .2vmin .1vmin rgba(255,200,200,.8),
-              8vw 89vh .2vmin .1vmin rgba(255,200,200,.8),
-              88vw 22vh .2vmin .1vmin rgba(255,200,200,.8),
-              69vw 44vh .2vmin .1vmin rgba(255,200,200,.8),
-              58vw 42vh .2vmin .1vmin rgba(255,200,200,.8),
-              16vw -1vh .2vmin .1vmin rgba(255,200,200,.8),
-              86vw 55vh .2vmin .1vmin rgba(255,200,200,.8),
-              44vw 68vh .2vmin .1vmin rgba(255,200,200,.8),
-              87vw 64vh .2vmin .1vmin rgba(255,200,200,.8);
+  box-shadow: 67vw 35vh .2vmin .1vmin rgba(255,200,200,.8),
+              89vw 13vh .2vmin .1vmin rgba(255,200,200,.8),
+              77vw 62vh .2vmin .1vmin rgba(255,200,200,.8),
+              1vw 74vh .2vmin .1vmin rgba(255,200,200,.8),
+              38vw 15vh .2vmin .1vmin rgba(255,200,200,.8),
+              79vw 10vh .2vmin .1vmin rgba(255,200,200,.8),
+              16vw 47vh .2vmin .1vmin rgba(255,200,200,.8),
+              74vw 71vh .2vmin .1vmin rgba(255,200,200,.8),
+              30vw 96vh .2vmin .1vmin rgba(255,200,200,.8),
+              13vw 98vh .2vmin .1vmin rgba(255,200,200,.8),
+              9vw 40vh .2vmin .1vmin rgba(255,200,200,.8),
+              9vw 71vh .2vmin .1vmin rgba(255,200,200,.8),
+              12vw 93vh .2vmin .1vmin rgba(255,200,200,.8),
+              91vw 26vh .2vmin .1vmin rgba(255,200,200,.8),
+              73vw 48vh .2vmin .1vmin rgba(255,200,200,.8),
+              61vw 46vh .2vmin .1vmin rgba(255,200,200,.8),
+              20vw 3vh .2vmin .1vmin rgba(255,200,200,.8),
+              90vw 59vh .2vmin .1vmin rgba(255,200,200,.8),
+              48vw 72vh .2vmin .1vmin rgba(255,200,200,.8),
+              91vw 68vh .2vmin .1vmin rgba(255,200,200,.8);
 }
-
 body::before {
-  box-shadow: 26vw 86vh .2vmin rgba(190,200,255,.9),
-              89vw 60vh .2vmin rgba(190,200,255,.9),
-              71vw 86vh .2vmin rgba(190,200,255,.9),
-              33vw 20vh .2vmin rgba(190,200,255,.9),
-              79vw 54vh .2vmin rgba(190,200,255,.9),
-              8vw 32vh .2vmin rgba(190,200,255,.9),
-              58vw 78vh .2vmin rgba(190,200,255,.9),
-              83vw 87vh .2vmin rgba(190,200,255,.9),
-              5vw -2vh .2vmin rgba(190,200,255,.9),
-              95vw 42vh .2vmin rgba(190,200,255,.9),
-              35vw 82vh .2vmin rgba(190,200,255,.9),
-              44vw 38vh .2vmin rgba(190,200,255,.9),
-              49vw 20vh .2vmin rgba(190,200,255,.9),
-              59vw 38vh .2vmin rgba(190,200,255,.9),
-              -2vw 49vh .2vmin rgba(190,200,255,.9),
-              63vw 7vh .2vmin rgba(190,200,255,.9),
-              28vw 40vh .2vmin rgba(190,200,255,.9),
-             -4vw 78vh .2vmin rgba(190,200,255,.9),
-              48vw 43vh .2vmin rgba(190,200,255,.9),
-              70vw 26vh .2vmin rgba(190,200,255,.9);
+  box-shadow: 30vw 90vh .2vmin rgba(190,200,255,.9),
+              93vw 64vh .2vmin rgba(190,200,255,.9),
+              75vw 80vh .2vmin rgba(190,200,255,.9),
+              37vw 24vh .2vmin rgba(190,200,255,.9),
+              83vw 58vh .2vmin rgba(190,200,255,.9),
+              12vw 36vh .2vmin rgba(190,200,255,.9),
+              62vw 82vh .2vmin rgba(190,200,255,.9),
+              87vw 91vh .2vmin rgba(190,200,255,.9),
+              9vw 2vh .2vmin rgba(190,200,255,.9),
+              99vw 46vh .2vmin rgba(190,200,255,.9),
+              39vw 86vh .2vmin rgba(190,200,255,.9),
+              48vw 42vh .2vmin rgba(190,200,255,.9),
+              53vw 24vh .2vmin rgba(190,200,255,.9),
+              63vw 42vh .2vmin rgba(190,200,255,.9),
+              2vw 53vh .2vmin rgba(190,200,255,.9),
+              67vw 11vh .2vmin rgba(190,200,255,.9),
+              32vw 44vh .2vmin rgba(190,200,255,.9),
+              0vw 82vh .2vmin rgba(190,200,255,.9),
+              51vw 47vh .2vmin rgba(190,200,255,.9),
+              74vw 30vh .2vmin rgba(190,200,255,.9);
 }
-
 body::after {
-  box-shadow: 76vw 60vh .1vmin rgba(200,255,230,.7),
-              28vw 41vh .1vmin rgba(200,255,230,.7),
-              61vw 58vh .1vmin rgba(200,255,230,.7),
-              18vw 51vh .1vmin rgba(200,255,230,.7),
-              64vw 15vh .1vmin rgba(200,255,230,.7),
-              50vw 30vh .1vmin rgba(200,255,230,.7),
-              -3vw 52vh .1vmin rgba(200,255,230,.7),
-              91vw -3vh .1vmin rgba(200,255,230,.7),
-              54vw 89vh .1vmin rgba(200,255,230,.7),
-              10vw 78vh .1vmin rgba(200,255,230,.7),
-              2vw 60vh .1vmin rgba(200,255,230,.7),
-              15vw 8vh .1vmin rgba(200,255,230,.7),
-              21vw 35vh .1vmin rgba(200,255,230,.7),
-              17vw 32vh .1vmin rgba(200,255,230,.7),
-              0.1vw 6vh .1vmin rgba(200,255,230,.7),
-              /*^^ 0.1vw should be 0 -->*/
-              81vw 66vh .1vmin rgba(200,255,230,.7),
-              50vw 89vh .1vmin rgba(200,255,230,.7),
-              5vw 42vh .1vmin rgba(200,255,230,.7),
-              59vw 55vh .1vmin rgba(200,255,230,.7),
-              44vw 24vh .1vmin rgba(200,255,230,.7);
+  box-shadow: 80vw 64vh .1vmin rgba(200,255,230,.7),
+              32vw 45vh .1vmin rgba(200,255,230,.7),
+              65vw 62vh .1vmin rgba(200,255,230,.7),
+              22vw 55vh .1vmin rgba(200,255,230,.7),
+              68vw 19vh .1vmin rgba(200,255,230,.7),
+              54vw 34vh .1vmin rgba(200,255,230,.7),
+              1vw 56vh .1vmin rgba(200,255,230,.7),
+              95vw 1vh .1vmin rgba(200,255,230,.7),
+              60vw 93vh .1vmin rgba(200,255,230,.7),
+              14vw 82vh .1vmin rgba(200,255,230,.7),
+              6vw 64vh .1vmin rgba(200,255,230,.7),
+              19vw 12vh .1vmin rgba(200,255,230,.7),
+              25vw 39vh .1vmin rgba(200,255,230,.7),
+              21vw 36vh .1vmin rgba(200,255,230,.7),
+              4vw 10vh .1vmin rgba(200,255,230,.7),
+              85vw 70vh .1vmin rgba(200,255,230,.7),
+              54vw 93vh .1vmin rgba(200,255,230,.7),
+              9vw 46vh .1vmin rgba(200,255,230,.7),
+              63vw 59vh .1vmin rgba(200,255,230,.7),
+              48vw 28vh .1vmin rgba(200,255,230,.7);
 }
-
 h1 {
   margin: 0;
   height: 12vmin;
@@ -175,7 +163,6 @@ h1 {
   justify-content: center;
   position: relative;
 }
-
 h1::before {
   content: "";
   display: block;
@@ -189,7 +176,6 @@ h1::before {
   border: 1.3vmin solid currentColor;
   box-sizing: border-box;
 }
-
 em {
   font-family: 'Josefin Sans', sans-serif;
   color: currentColor;
@@ -199,13 +185,11 @@ em {
   width: 20vmin;
   text-align: center;
 }
-
 em.planet {
   webkit-animation: planet-rotate 12s linear infinite;
   animation: planet-rotate 9s linear infinite;
   position: relative;
 }
-
 em.planet::before {
   content: "";
   position: absolute;
@@ -217,23 +201,19 @@ em.planet::before {
   border-radius: 50%;
   background: black;
 }
-
 em.planet.left {
   -webkit-transform-origin: 40vmin 5vmin;
   transform-origin: 40vmin 5vmin;
 }
-
 em.planet.right {
   webkit-transform-origin: -20vmin 5vmin;
   transform-origin: -20vmin 5vmin;
 }
-
 @-webkit-keyframes planet-rotate {
   to {
     -webkit-transform: rotate(1turn);
   }
 }
-
 @keyframes planet-rotate {
   to {
     transform: rotate(1turn);
@@ -242,34 +222,29 @@ em.planet.right {
 blockquote {
  color:#6495ED;
  font-size: 40px;
- /*was 400px*/
- top: 600px;
+ top: 250px;
  left: 900px;
  /*width: 50px;*/
  /*height: 100px;*/
 }
-
 blockquote:before {
   content: open-quote;
   line-height: 3px;
   vertical-align: -2px;
   text-align: right;
 }
-
 blockquote:after {
 	content: close-quote;
 	line-height: 3px;
 	vertical-align: -2px;
 	text-align: right;
 }
-
 h6 {
  color: #FFEBCD;
  font-size: 20px;
  text-align:left;
  vertical-align: middle;
 }
-
 label{
     display: inline-block;
     float: left;
@@ -283,24 +258,15 @@ input {
   float: left;
   vertical-align: middle;
 }
-
 textarea {
-	top: 450;
 	display: inline-block;
 	float: left;
 }
-
 .contactform {
-	top: 450;
 	display: inline-block;
 	float: left;
 	position: relative;
 }
-
-#college {
-	font-color: blue;
-}
-
     </style>
 </head>
 
@@ -319,8 +285,7 @@ textarea {
 </div>
 <div class = "welcome">
 <!--<blockquote style="center"> Edify-To instruct or improve (someone) intellectually </blockquote>-->
-<blockquote><i>Shoot for the moon. Even if you miss, you'll land among the stars.</i></blockquote>
-<p id = "college">College is within reach! Contact us to find out more, or check out the <a href = "http://edify101.org/about/">about</a>section!</a></p>
+<blockquote><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
 </div>
 <div id = "contactform"
 <form class="contactform" method="post" novalidate="novalidate">
@@ -345,4 +310,3 @@ textarea {
 	</div>
 </body>
 </html>
-
