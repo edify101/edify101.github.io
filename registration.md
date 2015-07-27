@@ -44,15 +44,12 @@ permalink: /login/
 
 	<body>
 
-		<form id="login-register" method="post" action="index.php">
+		<form id="login-register" method="post" action="registration.md">
 
 			<h1>Login or Register</h1>
-
 			<input type="text" placeholder="your@email.com" name="email" autofocus />
 			<p>Enter your email address above and we will send <br />you a login link.</p>
-
 			<button type="submit">Login / Register</button>
-
 			<span></span>
 
 		</form>
