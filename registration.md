@@ -40,7 +40,7 @@ permalink: /registration/
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script><input type="button" onclick="location.href='http://google.com';" value="Go to Google" />
+		<script><input type="button" onclick="location.href='http://edify101.org/emailconf';" value="Go to emailconf" />
 		</script>
 		<style>
 		<a href="http://edify101.org/emailconf" class="button">Register</a>
