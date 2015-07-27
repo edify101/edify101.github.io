@@ -62,7 +62,7 @@ permalink: /registration/
 			<input type="text" placeholder="your@email.com" name="email" autofocus />
 			<p>Enter your email address above and we will send <br />you a login link.</p>
 			<form action="http://edify101.org/emailconf">
-    <input type="submit" value="Go to email conf">
+    <input type="submit" value="Register">
 </form>
 			<span></span>
 
