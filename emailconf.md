@@ -1,3 +1,8 @@
+---
+layout: default
+title: Email conf
+permalink: /emailconf
+---
 <html>
 <head>
 </head>
