@@ -40,6 +40,19 @@ permalink: /registration/
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<script><input type="button" onclick="location.href='http://google.com';" value="Go to Google" />
+		</script>
+		<style>
+		<a href="http://edify101.org/emailconf" class="button">Register</a>
+		a.button {
+    webkit-appearance: button;
+    moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+</style>
 	</head>
 
 	<body>
@@ -49,7 +62,9 @@ permalink: /registration/
 			<h1>Register</h1>
 			<input type="text" placeholder="your@email.com" name="email" autofocus />
 			<p>Enter your email address above and we will send <br />you a login link.</p>
-			<button><a href = "http://edify101.org/emailconf">Register</a></button>
+			<form action="http://edify101.org/emailconf">
+    <input type="submit" value="Go to email conf">
+</form>
 			<span></span>
 
 		</form>
