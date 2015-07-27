@@ -12,9 +12,18 @@ permalink: /
 <meta name="description" content="high school and college prep and resources, mentoring">
 <meta name="author" content="Lizzie Siegle">
 <meta http-equiv="refresh" content="30">
-<script language="javascript">
-</script>		
- <style>
+ <script language = "Javascript" type = "text/javascript">
+			
+        // function welcomePopUp() {
+        //     window.open();
+        //     alert('Welcome to Edify101!')
+        // }
+        // function goodByePopUp() {
+        //     window.open();
+        //     alert('Have a nice day!')
+        // }
+    </script>
+    <style>
     html {
   margin: 0;
   height: 100%;
@@ -32,6 +41,7 @@ body {
 padding: 170px;
 justify-content: center;
 align-items: center;
+float: center;
 }
 html::before,
 html::after,
@@ -186,8 +196,8 @@ em {
   text-align: center;
 }
 em.planet {
-  webkit-animation: planet-rotate 12s linear infinite;
-  animation: planet-rotate 9s linear infinite;
+  -webkit-animation: planet-rotate 12s linear infinite;
+  animation: planet-rotate 12s linear infinite;
   position: relative;
 }
 em.planet::before {
@@ -206,7 +216,7 @@ em.planet.left {
   transform-origin: 40vmin 5vmin;
 }
 em.planet.right {
-  webkit-transform-origin: -20vmin 5vmin;
+  -webkit-transform-origin: -20vmin 5vmin;
   transform-origin: -20vmin 5vmin;
 }
 @-webkit-keyframes planet-rotate {
@@ -221,49 +231,113 @@ em.planet.right {
 }
 blockquote {
  color:#6495ED;
- font-size: 40px;
- text-align: right;
-}
-blockquote:before {
-  content: open-quote;
-  line-height: 3px;
-  vertical-align: -2px;
-  text-align: right;
-}
-blockquote:after {
-	content: close-quote;
-	line-height: 3px;
-	vertical-align: -2px;
-	text-align: right;
+ font-size: 30px;
 }
 h6 {
  color: #FFEBCD;
  font-size: 20px;
  text-align:left;
- vertical-align: middle;
+ /*padding-right: 500px;*/
+ /*padding-top: 250px;*/
 }
-label{
-    display: inline-block;
+/*.emailform {*/
+/* color:#FFEBCD;*/
+/* font-size: 15px;*/
+/* text-align: center;*/
+/* overflow: auto;*/
+/*}*/
+<style type="text/css">
+.form-style-2{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+.form-style-2-heading{
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.form-style-2 label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+    width: 100px;
+    font-weight: bold;
     float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-    vertical-align: middle;
+    padding-top: 8px;
+    padding-right: 5px;
 }
-input {
-  display: inline-block;
-  float: left;
-  vertical-align: middle;
+.form-style-2 span.required{
+    color:red;
 }
-textarea {
-	display: inline-block;
+.form-style-2 .tel-number-field{
+    width: 40px;
+    text-align: center;
+}
+.form-style-2 input.input-field{
+    width: 48%;
+    
+}
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2.textarea-field, 
+ .form-style-2 .select-field{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+    border: 1px solid #0C0;
+}
+.form-style-2 .textarea-field{
+    height:100px;
+    width: 55%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.form-style-1 input[type=submit]:hover,
+.form-style-1 input[type=button]:hover{
+    background: #EA7B00;
+    color: #fff;
+}
+#emailform li {
+	list-style-type: none;
 	float: left;
 }
-.contactform {
-	display: inline-block;
-	float: left;
-	position: relative;
+#container {
+	width: 1000px;
 }
+</style>
+
+</script>
     </style>
 </head>
 
@@ -277,33 +351,62 @@ textarea {
   <em>I</em>
   <em>F</em>
   <em class = "planet right">Y</em>
-  <em>101</em>
+  <em class>101</em>
 </h1>
 </div>
-<div class = "welcome">
+<div class = "welcome">      
 <!--<blockquote style="center"> Edify-To instruct or improve (someone) intellectually </blockquote>-->
-<blockquote><i>Shoot for the moon. Even if you miss, <br>you'll land among the stars.</i></blockquote>
+<blockquote style = "center"><i>"Shoot for the moon. Even if you miss, you'll land among the stars."</i></blockquote>
 </div>
-<div id = "contactform"
-<form class="contactform" method="post" novalidate="novalidate">
-				<input type="text" placeholder="Name*" required="required" id="contact_name" name="contact_name" class="text-input" value="" tabindex="565" />
-				<input type="email" required="required" placeholder="Email*" id="contact_email" name="contact_email" class="text-input" value="" tabindex="566"  />
-				<textarea placeholder="Message*" required="required" id="contact_content" name="contact_content" class="textarea" tabindex="567"></textarea>
-				<div class="btn-cont">
-                    <button tabindex="568" class="mk-progress-button mk-contact-button shop-flat-btn shop-skin-btn" data-style="move-up">
-                        <span class="send">Send</span>
-                        <span class="mk-progress">
-                            <span class="mk-progress-inner"></span>
-                        </span>
-                        <span class="state-success"><i class="mk-moon-checkmark"></i></span>
-                        <span class="state-error"><i class="mk-moon-close"></i></span>
-                    </button>
-                </div>
-				<input type="hidden" value="lizzie.siegle@gmail.com" name="contact_to"/>
-			</form>
-			<div class="bottom-arrow"></div>
-		</div>
-	</div>
-	</div>
+<center>
+<form>
+<ul class="form-style-1">
+    <li id = "emailform"><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+       <li id = "emailform"><label>Email <span class="required">*</span></label>
+        <input type="email" name="field3" class="field-long" />
+   	</li> 
+   	<li id = "emailform">
+        <label>Subject</label>
+        <select name="field4" class="field-select">
+        <option value="mentor">Be a mentor!</option>
+        <option value="mentee">Be a mentee!</option>
+        <option value="General Question">General question</option>
+        <option value = "sponsorship/partnership">Sponsor? Partner?</option>
+        </select>
+    	</li>
+    	<li id="emailform">
+        <label>Your Message <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        </li>
+        <li id = "emailform">
+        <input type="submit" value="Submit" />
+        </li>
+</ul>
+</form>
+</div>
+
+
+
+
+<script  type="text/javascript"> var frmvalidator = new Validator("myform"); frmvalidator.addValidation("FirstName","req","Please enter your First Name"); frmvalidator.addValidation("FirstName","maxlen=20",        "Max length for FirstName is 20");  frmvalidator.addValidation("LastName","req"); frmvalidator.addValidation("LastName","maxlen=20");  frmvalidator.addValidation("Email","maxlen=50"); frmvalidator.addValidation("Email","req"); frmvalidator.addValidation("Email","email");  frmvalidator.addValidation("Phone","maxlen=50"); frmvalidator.addValidation("Phone","numeric");  frmvalidator.addValidation("Address","maxlen=50"); frmvalidator.addValidation("Country","dontselect=000"); 
+</script> 
+
+        <script src="js/jquery.js">
+        </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.scrollstop.js"></script>
+    <script src="js/jquery.scrollsnap.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).scrollsnap({
+            snaps: '.page',
+            proximity: 400
+        });
+    });
+    </script>
 </body>
 </html>
