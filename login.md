@@ -3,11 +3,10 @@
 layout: default
 permalink: /login/
 ---
-<!doctype html>
 <html>
 <head>
 <title>Login</title>
- <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
 </style>
 </head>
