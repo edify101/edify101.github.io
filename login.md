@@ -1,12 +1,11 @@
 
 ---
 layout: default
-permalink: /login/
+permalink: /login
 ---
 <html>
 <head>
 <title>Login</title>
-<link rel="stylesheet" href="css/style.css">
 <style>
 </style>
 </head>
