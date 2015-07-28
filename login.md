@@ -1,3 +1,8 @@
+
+---
+layout: default
+permalink: /login/
+---
 <!doctype html>
 <html>
 <head>
