@@ -56,7 +56,7 @@ permalink: /registration/
 
 	<body>
 
-		<form id="login-register" method="post" action="registration.md">
+		<form id="login-register" method="post" action="emailconf.md">
 
 			<h1>Register</h1>
 			<input type="text" placeholder="your@email.com" name="email" autofocus />
