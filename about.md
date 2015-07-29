@@ -6,6 +6,9 @@ permalink: /about/
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
 <style>
+h6 {
+	size: 18px;
+}
 table {
 		border-collapse: collapse;
 		border: 1px solid #124412;
@@ -58,18 +61,21 @@ We need mentors, and you can get community service hours! We need sponsors, and 
 <div class = "bios">
 <div class = "bio">
 <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/018/1c0/19fb00a.jpg" alt = "Lizzie" class="img-circle" width="200" height="200" box-shadow= "7px 7px 8px #000000">
+<h6>Founder, web designer</h6>
 <p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. 
 </p>
 </div>
-<!--<div class = "bio">-->
-<!--<img src = "https://pbs.twimg.com/profile_images/465642420932075520/dDI0LkTn.jpeg" alt = "Savannah" class="img-circle" width="200" height="200"  box-shadow= "7px 7px 8px #000000">-->
-<!--<p>Savannah attends Dartmouth in Hanover, New Hampshire. She is passionate about sustainability and likes drawing and graphic design. She watches too much YouTube, loves Aziz Ansari, and used to have purple hair.-->
-<!--</p>-->
-<!--</div>-->
-<!--<div class = "bio">-->
-<!--<img src = "http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/245540/http_s3_amazonaws_com_feather-files-aviary-prod-us-east-1_f5da8ea5e_2015-01-12_beb83bf3a260466da6fd128aa084d892_ytzobj.png" alt = "Rachel" class = "img-circle" width = "200" height = "200" box-shadow = "7px 7px 8px #000000">-->
-<!--<p>-->
-<!--Rachel Xu is first-year student and potential computer science major at Bryn Mawr. She has been teaching herself programming languages including Python, Java, R etc and enjoys solving bioinformatics problems on Rosalind.-->
+<div class = "bio">
+<img src = "https://pbs.twimg.com/profile_images/465642420932075520/dDI0LkTn.jpeg" alt = "Savannah" class="img-circle" width="200" height="200"  box-shadow= "7px 7px 8px #000000">
+<h6>Logo designer</h6>
+<p>Savannah attends Dartmouth in Hanover, New Hampshire. She is passionate about sustainability and likes drawing and graphic design. She watches too much YouTube, loves Aziz Ansari, and used to have purple hair.
+</p>
+</div>
+<div class = "bio">
+<img src = "http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/245540/http_s3_amazonaws_com_feather-files-aviary-prod-us-east-1_f5da8ea5e_2015-01-12_beb83bf3a260466da6fd128aa084d892_ytzobj.png" alt = "Rachel" class = "img-circle" width = "200" height = "200" box-shadow = "7px 7px 8px #000000">
+<h6>Rails database specialist</h6>
+<p>
+Rachel Xu is first-year student and potential computer science major at Bryn Mawr. She has been teaching herself programming languages including Python, Java, R etc and enjoys solving bioinformatics problems on Rosalind.
 <!--</p>-->
 <!--</div>-->
 </body>
