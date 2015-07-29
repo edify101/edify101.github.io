@@ -7,7 +7,7 @@ permalink: /about/
 <link rel="stylesheet" type="text/css" href="main.css">
 <style>
 h6 {
-	size: 18px;
+	size: 27px;
 }
 table {
 		border-collapse: collapse;
