@@ -27,50 +27,61 @@ permalink: /registration/
 <!--ai ya-->
 <!--</body>-->
 <!--</html>-->
-<html>
+<!--<html>-->
 
-	<head>
-		<meta charset="utf-8"/>
-		<title>Tutorial: Super Simple Registration System With PHP &amp; MySQL</title>
+<!--	<head>-->
+<!--		<meta charset="utf-8"/>-->
+<!--		<title>Tutorial: Super Simple Registration System With PHP &amp; MySQL</title>-->
 
 		<!-- The main CSS file -->
-		<link href="assets/css/style.css" rel="stylesheet" />
+<!--		<link href="assets/css/style.css" rel="stylesheet" />-->
 
 		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<script><input type="button" onclick="location.href='http://edify101.org/emailconf';" value="Register" />
-		</script>
-		<style>
-		<a href="http://edify101.org/emailconf" class="button">Register</a>
-		a.button {
-    webkit-appearance: button;
-    moz-appearance: button;
-    appearance: button;
+<!--			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
+<!--		<![endif]-->-->
+<!--		<script><input type="button" onclick="location.href='http://edify101.org/emailconf';" value="Register" />-->
+<!--		</script>-->
+<!--		<style>-->
+<!--		<a href="http://edify101.org/emailconf" class="button">Register</a>-->
+<!--		a.button {-->
+<!--    webkit-appearance: button;-->
+<!--    moz-appearance: button;-->
+<!--    appearance: button;-->
 
-    text-decoration: none;
-    color: initial;
-}
-</style>
-	</head>
+<!--    text-decoration: none;-->
+<!--    color: initial;-->
+<!--}-->
+<!--</style>-->
+<!--	</head>-->
 
-	<body>
+<!--	<body>-->
 
-		<form id="login-register" method="post" action="emailconf.md">
+<!--		<form id="login-register" method="post" action="emailconf.md">-->
 
-			<h1>Register</h1>
-			<input type="text" placeholder="your@email.com" name="email" autofocus />
-			<p>Enter your email address above and we will send <br />you a login link.</p>
-			<form action="http://edify101.org/emailconf">
-    <input type="submit" value="Register">
-</form>
-			<span></span>
+<!--			<h1>Register</h1>-->
+<!--			<input type="text" placeholder="your@email.com" name="email" autofocus />-->
+<!--			<p>Enter your email address above and we will send <br />you a login link.</p>-->
+<!--			<form action="http://edify101.org/emailconf">-->
+<!--    <input type="submit" value="Register">-->
+<!--</form>-->
+<!--			<span></span>-->
 
-		</form>
+<!--		</form>-->
 
 		<!-- JavaScript Includes -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="assets/js/script.js"></script>
+<!--		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--		<script src="assets/js/script.js"></script>-->
 
-	</body>
+<!--	</body>-->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+  </body>
 </html>
