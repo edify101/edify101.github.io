@@ -1,7 +1,7 @@
 ---
 layout: default
 title: login
-permalink: /login/
+permalink: /signin/
 ---
 <html>
 <head>
