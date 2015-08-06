@@ -1,7 +1,7 @@
 
 ---
 layout: default
-permalink: /login/
+permalink: /signin/
 ---
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ permalink: /login/
 <style>
 <html>
 <head>
-<title>Login</title>
+<title>Sign-in</title>
 <style>
 </style>
 </head>
