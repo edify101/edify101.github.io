@@ -3,85 +3,152 @@ layout: default
 title: login
 permalink: /signup/
 ---
-<!--registration--> 
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--<title>Registration form</title>-->
-<!--<style>-->
-<!--</style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<form name="registration" method="post" action="registration.php">-->
-<!-- we will create registration.php after registration.html -->
-<!--EMAIL-ID:<input type="text" name="email" value=""></br>-->
-<!--PASSWORD:<input type="text" name="password" value=""></br>-->
-<!--RE-PASSWORD:<input type="text" name="repassword" value=""></br>-->
-<!--First name:<input type = "text" name = "first_name" value = ""></br>-->
-<!--Last name: <input type = "text" name = "last_name" value = ""></br>-->
-<!--City: <input type = "text" name = "city" value = ""></br>-->
-<!--Zipcode: <input type = "text" name = "zipcode" value = ""></br>-->
-<!--Age: <input type = "text" name = "age" value = ""></br>-->
-<!--<input type="submit" name="submit" value="submit">-->
-<!--</form>-->
-<!--ai ya-->
-<!--</body>-->
-<!--</html>-->
-<!--<html>-->
-
-<!--	<head>-->
-<!--		<meta charset="utf-8"/>-->
-<!--		<title>Tutorial: Super Simple Registration System With PHP &amp; MySQL</title>-->
-
-		<!-- The main CSS file -->
-<!--		<link href="assets/css/style.css" rel="stylesheet" />-->
-
-		<!--[if lt IE 9]>
-<!--			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
-<!--		<![endif]-->-->
-<!--		<script><input type="button" onclick="location.href='http://edify101.org/emailconf';" value="Register" />-->
-<!--		</script>-->
-<!--		<style>-->
-<!--		<a href="http://edify101.org/emailconf" class="button">Register</a>-->
-<!--		a.button {-->
-<!--    webkit-appearance: button;-->
-<!--    moz-appearance: button;-->
-<!--    appearance: button;-->
-
-<!--    text-decoration: none;-->
-<!--    color: initial;-->
-<!--}-->
-<!--</style>-->
-<!--	</head>-->
-
-<!--	<body>-->
-
-<!--		<form id="login-register" method="post" action="emailconf.md">-->
-
-<!--			<h1>Register</h1>-->
-<!--			<input type="text" placeholder="your@email.com" name="email" autofocus />-->
-<!--			<p>Enter your email address above and we will send <br />you a login link.</p>-->
-<!--			<form action="http://edify101.org/emailconf">-->
-<!--    <input type="submit" value="Register">-->
-<!--</form>-->
-<!--			<span></span>-->
-
-<!--		</form>-->
-
-		<!-- JavaScript Includes -->
-<!--		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-<!--		<script src="assets/js/script.js"></script>-->
-
-<!--	</body>-->
-
-<!DOCTYPE html>
 <html>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
+<head>
+<script src="//code.jquery.com/jquery-latest.min.js?v3" type="text/javascript"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?v3"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js?v3"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js?v3"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js?v3"></script>
+<!-- <script src="public/js/uprospie-bootstrap.js?v3"></script>
+<script src="public/js/directives.js?v3"></script>
+<script src="public/js/externalng.js?v3"></script> -->
+<script data-main="public/js/uprospie-external.js?v3" src="public/js/require.js?v3"></script>
+<meta name="viewport" content="initial-scale=1">
+
+<style>
+
+nav {
+    width:95% !important;
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+    height: 55px;
+    z-index:999999999;
+    position:static;
+    background:#23262B;
+    padding-top:15px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.13);
+
+/*    transition: all 0.3s;*/
+}
+
+    nav.navbar.static{
+        background:transparent !important;
+        border:none;
+        box-shadow: none;
+
+    }
+        nav.navbar.static #login{
+            border:transparent 1px solid;
+            color:white;
+            background:none;
+            box-shadow: none;
+
+        }
+        nav.navbar.static #signup{
+            border:white 1px solid;
+            background:none;
+        }
+
+            nav.navbar.static #signup:hover {
+                border: #52AEFB 1px solid;
+                color: #52AEFB;
+            }
+
+nav.navbar{
+    position:fixed;
+    top:0;
+    background:#fff;
+}
+
+nav > .nav-items{
+    display:table;
+    width:100%;
+}
+
+nav > .nav-items > div {
+    display:table-cell;
+    vertical-align: bottom;
+}
+
+nav > .nav-items > div > ul{
+    font-size:1.1em;
+}
+
+nav logo {
+    border-bottom:thick transparent solid;
+}
+
+nav > .nav-items > div > ul > li{
+    padding: 0 5px;
+    display:inline-flex;
+    vertical-align: bottom;
+    border-bottom:thick solid black;
+}
+nav.noaccent > .nav-items > div > ul > li, nav.noaccent{
+    border-bottom:thick transparent solid;
+}
+
+nav > .nav-items > div > ul > li.selected {
+    border-bottom:thick solid white;
+}
+
+.nav-items .profilepicture{
+    width:20px; height:20px;
+    border-radius:3px;
+    border:white thin solid;
+}
+
+@media screen and (max-width: 600px){
+  .left{
+    margin-top: -8px;
+  }
+}
+</style>
+
+
+
+<nav class="navbar static" >
+    <div class="nav-items">
+        <div class="middle">&nbsp;</div>
+        <div class="right" style="text-align:right;" >
+            <a href="#/signin" id="signin" class="submit-button secondary">Sign In</a>
+            <a href="#/signup" id="signup" class="submit-button" style="margin-left:10px;">Sign Up</a>
+        </div>
     </div>
-  </body>
-</html>
+</nav>
+<div ng-view></div><style>
+.w70move .offcolor{
+  opacity: .5;
+  color: #fff;
+}
+
+.w70move .item,.offcolor{
+  font-size: 11px;
+}
+
+.w70move .end{
+  font-family: Lato, sans-serif;
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  color: #fff;
+  opacity: .5;
+
+}
+
+.w70move{
+  width: 70%;
+}
+
+@media screen and (max-width: 600px){
+  .w70move{
+    width: 100%;
+  }
+
+
+}
+
+</style>
+</head>
