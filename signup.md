@@ -1,7 +1,7 @@
 ---
 layout: default
 title: login
-permalink: /registration/
+permalink: /signup/
 ---
 <!--registration--> 
 <!--<!DOCTYPE html>-->
