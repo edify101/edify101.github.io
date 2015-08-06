@@ -1,6 +1,6 @@
 ---
 layout: default
-title: login
+title: signup
 permalink: /signup
 ---
 <html>
