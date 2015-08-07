@@ -1,7 +1,7 @@
-<!------->
-<!--layout: default-->
-<!--permalink: /signin-->
-<!------->
+---
+layout: default
+permalink: /signin
+---
 <!DOCTYPE html>
 <html>
 <head>
