@@ -3,11 +3,85 @@ layout: default
 title: signup
 permalink: /signup
 ---
+<!DOCTYPE html>
 <html>
 <head>
-<script data-main="public/js/uprospie-external.js?v3" src="public/js/register.js?"></script>
+    <title>Validation</title>
+    <script src="validation.js"></script>
 </head>
-<body>
-<p>eff this why won't you work</p>
+<body onload="document.registration.userid.focus();">
+ 
+<h1>Registration Form</h1>
+<form name='registration' onSubmit="return formValidation();">
+    <ul>
+        <li>
+            <label for="userid">User id:</label>
+            <input type="text" name="userid" size="12" />
+        </li>
+ 
+        <li>
+          <label for="passid">Password:</label>
+            <input type="password" name="passid" size="12" />
+        </li>
+        
+        <li>
+            <label for="username">Name:</label>
+            <input type="text" name="username" size="50" />
+        </li>
+ 
+        <li>
+            <label for="address">Address:</label>
+            <input type="text" name="address" size="50" />
+        </li>
+ 
+        <li>
+            <label for="city">City:</label>
+            <select name="city">
+                <option selected="" value="Default">(Please select a country)</option>
+                <option value="EPA">East Palo Alto</option>
+                <option value="SM">San Mateo</option>
+                <option value="SF">San Francisco</option>
+            </select>
+        </li>
+        <!--<li>-->
+        <!--    <label for="zip">ZIP Code:</label>-->
+        <!--    <input type="text" name="zip" />-->
+        <!--</li>-->
+ 
+        <li>
+            <label for="email">Email:</label>
+            <input type="text" name="email" size="50" />
+        </li>
+
+        <li>
+            <label id="gender">Sex:</label>
+
+            <input type="radio" name="sex" value="Male" />
+
+            <span>Male</span>
+
+            <input type="radio" name="sex" value="Female" />
+
+            <span>Female</span>
+        </li>
+
+        <li>
+
+            <label>Language:</label>
+
+                <input type="checkbox" name="en" value="en" checked />
+
+                <span>English</span>
+
+                <input type="checkbox" name="nonen" value="nonen" />
+                <span>Non English</span>
+        </li>
+
+        <li><input type="submit" name="submit" value="Submit" /></li>
+
+    </ul>
+</form>
+
 </body>
 </html>
+
