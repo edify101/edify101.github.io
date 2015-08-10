@@ -1,6 +1,6 @@
 ---
-layout: default
-title: signup
+<!--layout: default-->
+<!--title: signup-->
 permalink: /signup
 ---
 <!DOCTYPE html>
