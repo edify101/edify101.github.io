@@ -62,7 +62,7 @@ We need mentors, and you can get community service hours! We need sponsors, and 
 <div class = "bio">
 <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/018/1c0/19fb00a.jpg" alt = "Lizzie" class="img-circle" width="200" height="200" box-shadow= "7px 7px 8px #000000">
 <h6>Founder, web designer</h6>
-<p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. 
+<p> Lizzie is a Computer Science and English student at Bryn Mawr College, near Philadelphia. She enjoys tutoring, working with kids, writing, reading, playing tennis, and attending hackathons. Visit her at <a href = "http://elizabethsiegle.github.io">http://elizabethsiegle.github.io</a>.
 </p>
 </div>
 <div class = "bio">
