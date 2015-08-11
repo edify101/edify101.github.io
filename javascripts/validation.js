@@ -13,11 +13,18 @@ function formValidation() {
         if(validatePassword(passid,7,12)) {
             if(allLetter(uname)) {
                 if(alphanumeric(uadd)) {
-                    if(countryselect(ucountry)) {
-                        if(allnumeric(uzip)) {
-                            if(ValidateEmail(uemail)) {
-                                if(validgender(mgender,fgender)) {
+                    if(cityselect(city)) {
+                        if(ValidateEmail(uemail)) {
+                            if(validgender(mgender,fgender)) {
+                                if(validlanguage(english,nonenglish)){
+                                    if(validrole(mentor, mentee)){
+                                        if(ageselect(age)) {
+
+                                        }
+
+                                    }
                                 }
+                                
                             }
                         }
                     }
@@ -117,10 +124,10 @@ function allLetter(uname)
 }
 
 /*country validation*/
-function countryselect(ucountry) {
+function cityselect(city) {
     if(ucountry.value == "Default")
     {
-        alert('Select your country from the list');
+        alert('Select your city from the list');
         return false;
     } else {
         return true;
@@ -164,13 +171,66 @@ function validgender(mgender,fgender) {
     if(x==0) {
         alert('Select Male/Female');
         return false;
-    } else {
-        alert('Form Successfully Submitted');
-        window.location.reload()
-        return true;
+     } 
+     if(x==2) {
+        alert('Select only one please');
+        return false;
+    }
+     /*else {
+    //     alert('Form Successfully Submitted');
+    //     window.location.reload()
+    //     return true;
+    }*/
+}
+
+function validlanguage(english, nonenglish) {
+    x=0;
+    if(english.checked) {
+        x++;
+    }
+    if(nonenglish.checked) {
+        x++;
+    }
+
+    if(x==0) {
+        alert('Select a language!');
+        return false;
+    } 
+    if(x ==2) {
+        alert('Select only one language please!');
+        return false;
     }
 }
 
+function validrole(mentor, mentee) {
+    x=0;
+    if(mentor.checked) {
+        x++;
+    }
+    if(mentee.checked) {
+        x++;
+    }
+
+    if(x==0) {
+        alert('Select a role please!');
+        return false;
+    }
+
+    if(x==2) {
+        alert('Select only one role.');
+        return false;
+    }
+}
+
+function ageselect(age) {
+    if(age.value == "Default")
+    {
+        alert('Select your age from the list');
+        return false;
+    } else {
+        return true;
+    }
+}
 
 
 
