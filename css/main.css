@@ -1,0 +1,75 @@
+element.style {
+  text-align: center;
+  background-color: #E0B2E0;
+}
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+  font-family: Merriweather, Georgia, Times, serif;
+  font-size: 14px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+user agent stylesheetbody {
+  display: block;
+  margin: 8px;
+}
+Inherited from 
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+  font-family: Merriweather, Georgia, Times, serif;
+  font-size: 14px;
+}
+
+nav ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 5em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h2 {
+    font-size: 4em;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    }
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+.bios {
+   float:left;
+    position: relative;
+    width: 30%;
+    display: inline;
+}
+
+.img {
+  width: 100%;
+  height: 4.5in;
+}

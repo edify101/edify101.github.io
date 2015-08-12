@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="/favicon.ico.jpg" type="image/x-icon" />
+		<link rel="shortcut icon" href="/favicon.ico.jpg" type="image/x-icon" />
+		<style>
+			ul.header {
+				line-height: 200%;
+				list-style-type: square;
+				/*width: 300px;*/
+    /*				height: 100px;*/
+				/*box-shadow: 10px 10px 5px #888888;*/
+				color: purple;
+				}
+				#button:hover {
+					font-weight: bold;
+					font-size:125%;
+					background-color: white;
+				}
+		</style>
+		<title>{{ page.title }}</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		
+	</head>
+		<body bgcolor="#E6E6FA">
+			<nav>
+	    		<ul class = "header">
+	        		<li id = "button"><a href="/">Home</a></li>
+		        	<li id = "button"><a href="/about">About</a></li>
+	        		<li id = "button"><a href="/resources">Resources</a></li>
+        			<li id = "button"><a href="/signup">Sign-up</a></li>
+        			<li id = "button"><a href = "/signin">Sign-in</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+			</footer>
+		</body>
+	</html>
