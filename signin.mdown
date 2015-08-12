@@ -13,6 +13,7 @@ permalink: /signin/
         }
         #signin {
             float:left;
+            display:block;
         }
         </style>
     </head>
