@@ -36,6 +36,10 @@ permalink: /about/
     				padding: 10px;
     				text-align: justify;
     				display: block;
+    				float:left;
+    			}
+    			.bio {
+    				float:left;
     			}
 		</style>
 	</head>
