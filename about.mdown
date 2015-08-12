@@ -34,8 +34,8 @@ permalink: /about/
     				width: 40%;
     				border:3px solid #8AC007;
     				padding: 10px;
-    				/*text-align: justify;
-    				display: block;*/
+    				text-align: justify;
+    				display: block;
     				float:left;
     			}
     			.bio {
