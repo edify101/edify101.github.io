@@ -40,6 +40,7 @@ permalink: /about/
     			}
     			.bio {
     				float:left;
+    				display:block;
     			}
 		</style>
 	</head>
