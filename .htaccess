@@ -1,4 +1,0 @@
-AuthType Basic  
-AuthName "Edify101 mentors and mentees only."  
-AuthUserFile ~/Desktop/edify101.github.io/.htpasswd  
-require valid-user
