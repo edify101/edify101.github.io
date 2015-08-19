@@ -47,7 +47,7 @@ function validateUsername(fld) {
         
     } else if ((fld.value.length < 5) || (fld.value.length > 12)) {
         fld.style.background = 'Yellow';
-        error = "The username is the wrong length.\n";
+        error = "The username should be within 5 to 12 characters.\n";
         alert(error);
         return false;
 
@@ -114,8 +114,9 @@ function allLetter(uname)
 
 /*address validation*/
 	function alphanumeric(uadd) {
-    var letters = /^[0-9a-zA-Z]+$/;
-    if(uadd.value.match(letters)) {
+    //var letters = /^[0-9a-zA-Z]+$/;
+
+    if(email.indexOf("@") > 0) {
         return true;
     } else {
         alert('User address must have alphanumeric characters only');

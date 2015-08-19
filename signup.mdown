@@ -18,7 +18,7 @@ permalink: /signup/
 </head>
 <body onload="document.registration.userid.focus();">
  
-<h4 align = 'center'>Registration Form</h4>
+<h4 align = 'center'>Registration</h4>
 <form name='registration' onSubmit="return formValidation();">
     <ul>
         <li>
@@ -37,7 +37,7 @@ permalink: /signup/
         </li>
  
         <li>
-            <label for="address">Address:</label>
+            <label for="address">Email Address:</label>
             <input type="text" name="address" size="50" />
         </li>
  
