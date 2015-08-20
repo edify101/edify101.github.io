@@ -3,16 +3,17 @@
 	<title>Mentor Database</title>
 </head>
 <style>
-body {
-                position: absolute;
-            }
-           header ul {
-                margin-top: 3%;
-                line-height: 150%;
-                list-style-type: none;
-                box-shadow: 100px 100px 50px #888888;
-            }
-            header ul li {
+    body {
+            position: absolute;
+        }
+    header ul {
+            margin-top: 3%;
+            line-height: 150%;
+            list-style-type: none;
+            box-shadow: 100px 100px 50px #888888;
+        }
+            
+        header ul li {
                 /*width: 300px;*/
                 font-size: 20px;
                 display:inline; /*uncomment and box-shadow is box around header.ul*/
@@ -27,17 +28,17 @@ body {
             #button:hover {
                 font-weight: bold;
                 font-size:135%;
-                background-color: white;
             }
 
             .mentortable {
-				margin:0px;padding:0px;
+				margin:10px;padding:0px;
 				box-shadow: 10px 10px 5px #888888;
 				border:1px solid #007fff;
 	
 				-moz-border-radius-bottomleft:25px;
 				-webkit-border-bottom-left-radius:25px;
 				border-bottom-left-radius:25px;
+                margin:30px;
 	
 				-moz-border-radius-bottomright:25px;
 				-webkit-border-bottom-right-radius:25px;
@@ -59,25 +60,25 @@ body {
 				margin:75px;padding:0px;
 			}
 			.mentortable tr:last-child td:last-child {
-				-moz-border-radius-bottomright:25px;
-				-webkit-border-bottom-right-radius:25px;
-				border-bottom-right-radius:25px;
+				-moz-border-radius-bottomright:20px;
+				-webkit-border-bottom-right-radius:20px;
+				border-bottom-right-radius:20px;
 			}
 			.mentortable table tr:first-child td:first-child {
-				-moz-border-radius-topleft:25px;
-				-webkit-border-top-left-radius:25px;
-				border-top-left-radius:25px;
+				-moz-border-radius-topleft:20px;
+				-webkit-border-top-left-radius:20px;
+				border-top-left-radius:20px;
 			}
 			.mentortable table tr:first-child td:last-child {
-				-moz-border-radius-topright:25px;
-				-webkit-border-top-right-radius:25px;
-				border-top-right-radius:25px;
+				-moz-border-radius-topright:20px;
+				-webkit-border-top-right-radius:20px;
+				border-top-right-radius:20px;
 			}
 
 			.mentortable tr:last-child td:first-child{
-				-moz-border-radius-bottomleft:25px;
-				-webkit-border-bottom-left-radius:25px;
-				border-bottom-left-radius:25px;
+				-moz-border-radius-bottomleft:20px;
+				-webkit-border-bottom-left-radius:20px; /*25px*/
+				border-bottom-left-radius:20px;
 			}
 			/*.mentortable tr:hover td{
 	
@@ -96,7 +97,7 @@ body {
 				border:1px solid #007fff;
 				border-width:0px 1px 1px 0px;
 				text-align:center;
-				padding:100px;
+				padding:10px; /*100px*/
 				font-size:10px;
 				font-family:Arial;
 				font-weight:normal;
@@ -104,14 +105,17 @@ body {
 			}
 			.mentortable tr:last-child td{
 				border-width:0px 1px 0px 0px;
+                margin:10px;
 			}
 
 			.mentortable tr td:last-child{
 				border-width:0px 0px 1px 0px;
+                margin:10px;
 			}
 
 			.mentortable tr:last-child td:last-child{
 				border-width:0px 0px 0px 0px;
+                margin:10px;
 			}
 
 			.mentortable tr:first-child td {
@@ -128,6 +132,7 @@ body {
 				font-family:Arial;
 				font-weight:bold;
 				color:#ffffff;
+                margin:10px;
 			}
 			
 			.mentortable tr:first-child:hover td{
@@ -137,13 +142,16 @@ body {
 				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#00007f");
 				background: -o-linear-gradient(top,#007fff,00007f);
 				background-color:#007fff;
+                margin: 10px;
 			}
 
 			.mentortable tr:first-child td:first-child{
 				border-width:0px 0px 1px 0px;
+                margin:10px;
 			}
 			.mentortable tr:first-child td:last-child{
 				border-width:0px 0px 1px 1px;
+                margin:10px;
 			}
 		</style>
 	<body style = "visibility:hidden;">
@@ -153,7 +161,7 @@ body {
                 <li id = "button"><a href="about.html">About</a></li>
                 <li id = "button"><a href="resources.html">Resources</a></li>
                 <li id = "button"><a href="database.html">Database of Mentors</a></li>
-                <li><img src = "/Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:80%;position:relative;top:-40px;"></li>
+                <!-- <li><img src = "/Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:80%;position:relative;top:-40px;"></li> -->
             </ul>
     </header>
 </body>
