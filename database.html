@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Mentor Database</title>
+</head>
+<style>
+body {
+                position: absolute;
+            }
+           header ul {
+                margin-top: 3%;
+                line-height: 150%;
+                list-style-type: none;
+                box-shadow: 100px 100px 50px #888888;
+            }
+            header ul li {
+                /*width: 300px;*/
+                font-size: 20px;
+                display:inline; /*uncomment and box-shadow is box around header.ul*/
+                height: 35px;
+                color: purple;
+                float:left;
+            }
+            header ul li a {
+                text-decoration:none;
+                padding: .2em 1em;
+            }
+            #button:hover {
+                font-weight: bold;
+                font-size:135%;
+                background-color: white;
+            }
+</style>
+<body style = "visibility:hidden;">
+	<header>
+            <ul>
+                <li id = "button"><a href="index.html">Home</a></li>
+                <li id = "button"><a href="about.html">About</a></li>
+                <li id = "button"><a href="resources.html">Resources</a></li>
+                <li id = "button"><a href="database.html">Database of Mentors</a></li>
+                <li><img src = "/Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:80%;position:relative;top:-40px;"></li>
+            </ul>
+    </header>
+</body>
+  <script>
+        var passAttempt = prompt("Password?");
+        if(passAttempt === "college"){
+            document.getElementsByTagName("body")[0].style.visibility = "visible";
+            console.log("yash");
+        } else {
+            alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of  the resources.");
+        }
+    </script>
+</html>

@@ -1,31 +1,72 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
         <style>
-        h3 {
-        	font-size: 25px;
-        }
-        h6 {
-        	font-size: 19px;
-        } 
+            h3 {
+        	   font-size: 25px;
+            }
+        
+            h6 {
+        	   font-size: 19px;
+               margin-bottom:1px;
+            } 
+            
+            body {
+                position: absolute;
+            }
+           header ul {
+                margin-top: 3%;
+                line-height: 150%;
+                list-style-type: none;
+                box-shadow: 100px 100px 50px #888888;
+            }
+            header ul li {
+                /*width: 300px;*/
+                font-size: 20px;
+                display:inline; /*uncomment and box-shadow is box around header.ul*/
+                height: 35px;
+                color: purple;
+                float:left;
+            }
+            header ul li a {
+                text-decoration:none;
+                padding: .2em 1em;
+            }
+            #button:hover {
+                font-weight: bold;
+                font-size:135%;
+                background-color: white;
+            }
+
+            header {
+                margin-bottom:6px;
+                margin-top:6px;
+                /*margin-bottom:10px;*/
+            }
+
+            p {
+                margin-top:80px;
+                width:80%;
+                margin-left:10px;
+            }
     </style>
     </head>
     <body style="visibility: hidden">
-        <nav>
-            <ul class = "header">
+            <header>
+                <ul>
                 <li id = "button"><a href="index.html">Home</a></li>
                 <li id = "button"><a href="about.html">About</a></li>
                 <li id = "button"><a href="resources.html">Resources</a></li>
-                <li id = "button"><a href="#">Sign-up</a></li>
-                <li id = "button"><a href = "#">Sign-in</a></li>
-            </ul>
-        </nav>
-        <p>This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.</p>
+                <li id = "button"><a href="database.html">Database of Mentors</a></li>
+                <li><img src = "/Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:70%;position:relative;top:-20px; height:145%;"></li>
+                <!-- <li id = "button"><a href = "#">Sign-in</a></li> -->
+                </ul>
+            </header>
+        <p>This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.
         The <font color = "green"> green</font> pins show places we suggest as community center hubs of innovation and learning. They can help you, as students and mentees, with school or to learn a new skill. They can also provide in-person mentoring.</p>
        <iframe frameborder="0" style="width:100%;height:500px" src="http://www.zeemaps.com/pub?group=1553569&legend=1&locate=1&list=1&simpleadd=1&x=-122.178118&y=37.489615&z=5"></iframe>
         </div>
-        <div class = "volunteering">
-            <!--<li>Volunteer at your local library!</li>-->
+        <!-- <div class = "volunteering">
+            <li>Volunteer at your --> 
             <!--<li>East Palo Alto Senior Center</li>-->
             <!--<li>San Mateo Library</li>-->
             <!--<li>San Mateo Senior Center</li>-->
@@ -36,12 +77,13 @@
             <!--<li>San Mateo Medical Center</a></li>-->
             <!--<li>StreetCode Academy</li>-->
             <!--<li>East Palo Alto Tennis and Tutoring</li>-->
-        </ul>
-        <h6>Online Academic resources</h6>
+       <!--  </ul> -->
+        <h6 style = "margin-top:1px;">Online Academic resources</h6>
         <p>
             The local library is an amazing resource. They provide computers and printers (small fee), as well as some free tutoring services.
             My brother took a free practice SAT test at the Burlingame library! In terms of online help, you can't go wrong with Khan Academy--I
             still use it!
+        </p>
         <ul>
             <li><a href = "http://www.smcl.org/en/content/homework-help">Online, live Homework help</a></li>
             <li><a href = "http://www.smcl.org/content/east-palo-alto-quest-learning-center">East Palo Alto Quest Learning Center</a></li>
@@ -50,11 +92,11 @@
     </body>
     <script>
         var passAttempt = prompt("Password?");
-        if(passAttempt === "colly"){
+        if(passAttempt === "college"){
             document.getElementsByTagName("body")[0].style.visibility = "visible";
             console.log("yash");
         } else {
-            alert("wrong password");
+            alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of  the resources.");
         }
     </script>
 </html>
