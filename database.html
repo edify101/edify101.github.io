@@ -2,7 +2,6 @@
 <head>
     <link rel="SHORTCUT ICON" type="image/x-icon"
        href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.ico"/>
-       <link rel="stylesheet" href="stylesheets/styles.css">
 	<title>Mentor Database</title>
 <style>
     body {
@@ -157,8 +156,7 @@
 			}
 		</style>
     </head>
-	<body style = "visibility:hidden;">
-	<header>
+    <header>
             <ul>
                 <li id = "button"><a href="index.html">Home</a></li>
                 <li id = "button"><a href="about.html">About</a></li>
@@ -167,12 +165,50 @@
                 <li id = "button"><a href = "formentors.html">For Mentors</a></li>
             </ul>
     </header>
-</body>
-<div class="mentortable">
+	<body style = "visibility:hidden;">
+	<div class="mentortable">
+    <!--<script src="ENTER ENTIRE API URL HERE" type="text/javascript"></script>
+     <script type="text/javascript">
+//     google.load("feeds", "1");
+ 
+//     function feedLoaded(result) {
+//       if (!result.error) {
+//         // Grab the container we will put the results into
+//         var container = document.getElementById("mybox");
+//         container.innerHTML = '';
+//         // Check out the result object for a list of properties returned in each entry.
+//         // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
+//         for (var i = 0; i < result.feed.entries.length; i++) {
+ 
+ 
+//           var entry = result.feed.entries[i];
+//           var div = document.createElement("div");
+ 
+// var date = new Date(entry.publishedDate);
+//   date = date.toDateString().substr(4);
+ 
+//           div.appendChild(document.createTextNode('This much as of ' + date + ': $' + entry.content));
+//           container.appendChild(div);
+//         }
+//       }
+//     }
+ 
+//     function OnLoad() {
+ 
+//       var feed = new google.feeds.Feed("https://docs.google.com/spreadsheets/d/1nIrrRnUp0C0HlEwXz43qq-Gd9UfiH74YwM6a5HkWlJE/pub?gid=1063830476&single=true&output=csv");
+ 
+//       feed.includeHistoricalEntries();
+//       feed.setNumEntries(1); // maximum entries
+ 
+//       feed.load(feedLoaded);
+//     }
+ 
+//     google.setOnLoadCallback(OnLoad);
+//     </script> -->
     <table >
         <tr>
             <td>
-            	Name
+                Name
             </td>
             <td>
                 High School
@@ -184,10 +220,7 @@
                 Interests/Hobbies
             </td>
             <td>
-            	Email
-            </td>
-            <td>
-            	Phone/best time to call
+                Email
             </td>
         </tr>
         
@@ -202,13 +235,10 @@
                 Bryn Mawr College, intended Computer Science and Linguistics. Or English.
             </td>
             <td>
-            	Tennis, programming, reading, writing, teaching
+                Tennis, programming, reading, writing, teaching
             </td>
             <td >
                 <a href="MAILTO:lizzie.siegle@gmail.com">lizzie.siegle@gmail.com</a>
-            </td>
-            <td>
-                (650) 787-8004/after dinner
             </td>
         </tr>
         <tr>
@@ -225,10 +255,7 @@
                 Youtube, running, art
             </td>
             <td>
-            	<a href="MAILTO:savannah12317@gmail.com">savannah12317@gmail.com</a>
-            </td>
-            <td>
-                (650) 888-1367
+                <a href="MAILTO:savannah12317@gmail.com">savannah12317@gmail.com</a>
             </td>
         </tr>
         <tr>
@@ -247,9 +274,6 @@
             <td>
                 <a href="MAILTO:Echu149@aol.com">Echu149@aol.com</a>
             </td>
-            <td>
-                6507870958
-            </td>
         </tr>
                 <tr>
             <td>
@@ -266,9 +290,6 @@
             </td>
             <td>
                 <a href="MAILTO:tommysiegle@att.net">tommysiegle@att.net</a>
-            </td>
-            <td>
-                6507662845
             </td>
         </tr>
           <tr>
@@ -287,9 +308,6 @@
             <td>
                 <a href="MAILTO:payalkela@gmail.com">payalkela@gmail.com</a>
             </td>
-            <td>
-                6502849807
-            </td>
         </tr>
          <tr>
             <td>
@@ -306,9 +324,6 @@
             </td>
             <td>
                 <a href="MAILTO:tejasbadadare@gmail.com">tejasbadadare@gmail.com</a>
-            </td>
-            <td>
-                6507873973
             </td>
         </tr>
          <tr>
@@ -327,8 +342,22 @@
             <td>
                 <a href="MAILTO:jillianosheroff@gmail.com">jillianosheroff@gmail.com</a>
             </td>
+        </tr>
+        <tr>
             <td>
-                6502742769
+                Teresa
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                New York University (economics)
+            </td>
+            <td>
+                Read, binge watch TV shows, shopping
+            </td>
+            <td>
+                <a href="MAILTO:14teresalee@gmail.com">14teresalee@gmail.com</a>
             </td>
         </tr>
         <tr>
@@ -342,10 +371,7 @@
                 Row 3
             </td>
             <td>
-            	Row 3
-            </td>
-            <td>
-            	Row 3
+                Row 3
             </td>
             <td>
                 Row 3
@@ -354,6 +380,9 @@
     </table>
 </div>
 <iframe width='500' height='600' frameborder='0' src="https://docs.google.com/forms/d/1AaeM092VnYKxN2YPpCeplCeptiwzaSp-JUUXuwqpHLA/viewanalytics"></iframe>
+</body>
+
+
 
 <script>
     var passAttempt = prompt("Password?");
