@@ -1,7 +1,7 @@
 <html>
 <head>
     <link rel="SHORTCUT ICON" type="image/x-icon"
-       href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg"/>
+       href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.ico"/>
 	<title>Mentor Database</title>
 <style>
     body {
@@ -163,7 +163,7 @@
                 <li id = "button"><a href="about.html">About</a></li>
                 <li id = "button"><a href="resources.html">Resources</a></li>
                 <li id = "button"><a href="database.html">Database of Mentors</a></li>
-                <li><img src = "file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:50%;position:relative;margin-top:1%;height:80%;"></li>
+                <li id = "button"><a href = "formentors.html">For Mentors</a></li>
             </ul>
     </header>
 </body>
@@ -231,6 +231,46 @@
             </td>
         </tr>
         <tr>
+            <td>
+                Elise
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC Berkeley, Biology major
+            </td>
+            <td>
+                tap dancing, softball
+            </td>
+            <td>
+                <a href="MAILTO:Echu149@aol.com">Echu149@aol.com</a>
+            </td>
+            <td>
+                6507870958
+            </td>
+        </tr>
+                <tr>
+            <td>
+                Tommy
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC Merced, intended Mechanical Engineering
+            </td>
+            <td>
+                soccer, video games, ping pong, League of Legends
+            </td>
+            <td>
+                <a href="MAILTO:tommysiegle@att.net">tommysiegle@att.net</a>
+            </td>
+            <td>
+                6507662845
+            </td>
+        </tr>
+        <tr>
             <td >
                 Your name! Yes you!
             </td>
@@ -252,6 +292,7 @@
         </tr>
     </table>
 </div>
+<iframe width='500' height='600' frameborder='0' src="https://docs.google.com/forms/d/1AaeM092VnYKxN2YPpCeplCeptiwzaSp-JUUXuwqpHLA/viewanalytics"></iframe>
 
 <script>
     var passAttempt = prompt("Password?");
@@ -259,7 +300,8 @@
             document.getElementsByTagName("body")[0].style.visibility = "visible";
             console.log("yash");
         } else {
-            alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of  the resources.");
+            alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of the resources.");
+            document.getElementsByTagName("header")[0].style.visibility="visible";
         }
 </script>
 

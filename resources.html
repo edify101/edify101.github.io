@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="SHORTCUT ICON" type="image/x-icon"
-       href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg"/>
+       href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.ico"/>
         <title>College, Volunteer resources</title>
         <style>
             h3 {
@@ -53,17 +53,18 @@
             }
     </style>
     </head>
-    <body style="visibility: hidden">
-            <header>
+    <header>
                 <ul>
                 <li id = "button"><a href="index.html">Home</a></li>
                 <li id = "button"><a href="about.html">About</a></li>
                 <li id = "button"><a href="resources.html">Resources</a></li>
                 <li id = "button"><a href="database.html">Database of Mentors</a></li>
-                <li><img src = "file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.jpeg" style="width:70%;position:relative;top:-20px; height:145%;"></li>
+                <li id = "button"><a href = "formentors.html">For Mentors</a></li>
                 <!-- <li id = "button"><a href = "#">Sign-in</a></li> -->
                 </ul>
             </header>
+    <body style="visibility: hidden">
+            
         <p>This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.
         The <font color = "green"> green</font> pins show places we suggest as community center hubs of innovation and learning. They can help you, as students and mentees, with school or to learn a new skill. They can also provide in-person mentoring.</p>
        <iframe frameborder="0" style="width:100%;height:500px" src="http://www.zeemaps.com/pub?group=1553569&legend=1&locate=1&list=1&simpleadd=1&x=-122.178118&y=37.489615&z=5"></iframe>
@@ -100,6 +101,7 @@
             console.log("yash");
         } else {
             alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of  the resources.");
+            document.getElementsByTagName("header")[0].style.visibility="visible";
         }
     </script>
 </html>
