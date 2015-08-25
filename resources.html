@@ -1,8 +1,8 @@
 <html>
     <head>
         <link rel="SHORTCUT ICON" type="image/x-icon"
-       href="file:///Users/lizziesiegle/Desktop/edify101.github.io/favicon.ico"/>
-       <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+       href="edify101.github.io/favicon.ico"/>
+       <link rel="stylesheet" href="stylesheets/styles.css">
         <title>College, Volunteer resources</title>
         <style>
             h3 {
@@ -10,42 +10,62 @@
             }
         
             h6 {
+                font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+                padding: 3px;
         	   font-size: 19px;
                margin-bottom:1px;
+               margin-left:20%;
+               width:25%;
+               background-color:#CCFFCC;
             } 
-            
-            body {
-                position: absolute;
-            }
-           header ul {
-                margin-top: 3%;
-                line-height: 150%;
-                list-style-type: none;
-                box-shadow: 100px 100px 50px #888888;
-            }
-            header ul li {
-                /*width: 300px;*/
-                font-size: 20px;
-                display:inline; /*uncomment and box-shadow is box around header.ul*/
-                height: 35px;
-                color: purple;
-                float:left;
-            }
-            header ul li a {
-                text-decoration:none;
-                padding: .2em 1em;
-            }
-            #button:hover {
-                font-weight: bold;
-                font-size:135%;
-                background-color: white;
+
+            #help {
+                margin-left:20%;
+                margin-right:20%;
+                width:50%;
+                color:white;
+                background-color:#99CCFF;
+                padding:2%;
             }
 
-            header {
-                margin-bottom:6px;
-                margin-top:6px;
-                /*margin-bottom:10px;*/
+            #help li {
+                margin-bottom:2%;
+                list-style-position: inside;
+                font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+                border-bottom: 1px solid #ccc;
             }
+
+            #help li:last-child {
+                border: none;
+            }
+            
+            #help li a {
+                text-decoration: none;
+                color: #000;
+                display: block;
+                width: 100%;
+ 
+                -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+                -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+                transition: font-size 0.3s ease, background-color 0.3s ease;
+            }
+
+            #help li a:hover {
+                font-size: 30px;
+                background: #f6f6f6;
+            }
+ 
+            body {
+                position: absolute;
+                
+            }
+
+            #resourcesdiv {
+                margin-left:10%;
+            }
+
 
             p {
                 margin-top:80px;
@@ -53,24 +73,41 @@
                 margin-left:10px;
             }
 
-            #resources {
-                margin-top:-.02%;
+            #resources2 {
+                margin-top:3%;
+                margin-left:20%;
+                line-height:128%;
+                width:50%;
+
             }
+            #resources1 {
+                margin-top:2.3%;
+                margin-left:20%;
+                line-height:128%;
+                width:50%;
+            }
+
+            footer {
+                text-align: center;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
     </style>
     </head>
     <header>
-                <ul>
+            <ul>
                 <li id = "button"><a href="index.html">Home</a></li>
                 <li id = "button"><a href="about.html">About</a></li>
                 <li id = "button"><a href="resources.html">Resources</a></li>
                 <li id = "button"><a href="database.html">Database of Mentors</a></li>
                 <li id = "button"><a href = "formentors.html">For Mentors</a></li>
                 <!-- <li id = "button"><a href = "#">Sign-in</a></li> -->
-                </ul>
-            </header>
+            </ul>
+    </header>
     <body style="visibility: hidden">
             
-        <p>This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.
+        <p id = "resources1">This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.
         The <font color = "green"> green</font> pins show places we suggest as community center hubs of innovation and learning. They can help you, as students and mentees, with school or to learn a new skill. They can also provide in-person mentoring.</p>
        <iframe frameborder="0" style="width:100%;height:500px" src="http://www.zeemaps.com/pub?group=1553569&legend=1&locate=1&list=1&simpleadd=1&x=-122.178118&y=37.489615&z=5"></iframe>
         </div>
@@ -87,22 +124,46 @@
             <!--<li>StreetCode Academy</li>-->
             <!--<li>East Palo Alto Tennis and Tutoring</li>-->
        <!--  </ul> -->
+       <!-- <div id = "resourcesdiv"> -->
         <h6>Online Academic resources</h6>
-        <p id = "resources">
+        <p id = "resources2">
             The local library is an amazing resource. They provide computers and printers (small fee), as well as some free tutoring services.
             My brother took a free practice SAT test at the Burlingame library! In terms of online help, you can't go wrong with Khan Academy--they provide free SAT prep, and we
             still use it for college courses.
         </p>
-        <ul>
-            <li><a href = "http://www.smcl.org/en/content/homework-help">Online, live Homework help</a> from the local San Mateo County Library System</li>
-            <li><a href = "http://www.khanacademy.org/">Khan Academy</a>--Free SAT prep, in addition to helpful video tutorials</li>
-            <li><a href = "http://www.kaptest.com/sat/enroll?zip=94403&tab=events">Free SAT prep</a> in the San Mateo county area. Can be customized to show for different zip codes.</li>
-            <li><a href = "http://tutorchatlive.org/">Free online tutoring</a>from Tutor Chat Live</li>
+        <ul id = "help">
+            <li><a href = "http://www.smcl.org/en/content/homework-help">Online, live Homework help</a>from the local San Mateo County Library System</li>
+            <li><a href = "http://teens.smcl.org/en/links">College, volunteering and job help</a>from local San Mateo County Library System</li>
+            <li><a href = "http://www.khanacademy.org/">Khan Academy</a>Free SAT prep, in addition to helpful video tutorials</li>
+            <li><a href = "http://tutorchatlive.org/">Tutor Chat Live</a>Free online tutoring</li>
+            <li><a href = "https://www.goconqr.com">Goconqr</a>Free Studying/Review Help</li>
+            <li><a href = "https://www.mathway.com">Math help</a>type in a problem(Algebra-Calculus)</li>
+            <li><a href = "http://www.wolframalpha.com">Wolfram Alpha</a>Math calculators</li>
+            <li><a href = "https://www.languagetool.org">Language/grammar help</a></li>
+            <li><a href = "https://www.youtube.com/user/crashcourse/videos">Youtube Crash Courses</a>Quick videos that summarize various subjects</li>
         </ul>
         <h6>In-person Academic Resources</h6>
-        <ul id="resources">
-            <li><a href = "http://www.smcl.org/content/east-palo-alto-quest-learning-center">East Palo Alto Quest Learning Center</a>--Drop in to the EPA Library to receive free, live homework help</li>
-    </body>
+        <ul id="help">
+            <li><a href = "http://www.smcl.org/content/east-palo-alto-quest-learning-center">East Palo Alto Quest Learning Center</a>Drop in to the EPA Library to receive free, live homework help</li>
+            <li><a href = "http://teens.smcl.org/homework">Teen Homework Help</a>at libraries</li>
+        </ul>
+        <h6>High School Advice</h6>
+        <ul id = "help">
+        <li><a href = "http://www.wikihow.com/Survive-Your-Freshman-Year-in-High-School">1st Year Advice</a>Survive(and thrive) in your freshman year of high school</li>
+        <li><a href = "http://www.learningcommons.uoguelph.ca/guides/university_learning/accessibility/studying.html">Study Tips</a>Study like a college student!</li>
+        <li><a href = "http://www.visualistan.com/2014/08/exam-lifehacks-18-unexpected-tips-for-high-score.html">Life Hacks</a>How to get a higher score</li>
+    </ul>
+    <h6>College Prep</h6>
+    <ul id = "help">
+        <li><a href = "http://www.questbridge.org/for-students/students-start-here">Questbridge</a>Scholarships</li>
+        <li><a href = "http://www.kaptest.com/sat/enroll?zip=94403&tab=events">Free SAT prep</a> in the San Mateo county area. Can be customized to show for different zip codes.</li>
+    </ul>
+<!-- </div> -->
+  <footer>
+        &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Edify101.
+    </footer>
+</body>
+
     <script>
         var passAttempt = prompt("Password?");
         if(passAttempt === "college"){
