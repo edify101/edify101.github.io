@@ -53,7 +53,7 @@
             }
 
             #help li a:hover {
-                font-size: 30px;
+                font-size: 110%;
                 background: #f6f6f6;
             }
  
@@ -91,6 +91,7 @@
                 text-align: center;
                 margin-left:auto;
                 margin-right:auto;
+                margin-top:1%;
             }
 
     </style>
@@ -105,7 +106,8 @@
                 <!-- <li id = "button"><a href = "#">Sign-in</a></li> -->
             </ul>
     </header>
-    <body style="visibility: hidden">
+    <!--<body style="visibility: hidden">-->
+    <body>
             
         <p id = "resources2">This interactive map shows places you can volunteer at! Click on the <font color = "red">red</font> pins for more information on volunteer locations.
         The <font color = "green"> green</font> pins show places we suggest as community center hubs of innovation and learning. They can help you, as students and mentees, with school or to learn a new skill. They can also provide in-person mentoring.</p>
@@ -126,7 +128,7 @@
        <!--  </ul> -->
        <!-- <div id = "resourcesdiv"> -->
         <h6>Online Academic resources</h6>
-        <p id = "resources1">
+        <p id = "resources1" style="margin-top:1.5%">
             The local library is an amazing resource. They provide computers and printers (small fee), as well as some free tutoring services.
             My brother took a free practice SAT test at the Burlingame library! In terms of online help, you can't go wrong with Khan Academy--they provide free SAT prep, and we
             still use it for college courses.
@@ -177,7 +179,7 @@
     </footer>
 </body>
 
-    <script>
+    <!--<script>
         var passAttempt = prompt("Password?");
         if(passAttempt === "college"){
             document.getElementsByTagName("body")[0].style.visibility = "visible";
@@ -186,5 +188,5 @@
             alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of  the resources.");
             document.getElementsByTagName("header")[0].style.visibility="visible";
         }
-    </script>
+    </script>-->
 </html>
