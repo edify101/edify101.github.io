@@ -1,0 +1,476 @@
+<html>
+<head>
+	<link rel="SHORTCUT ICON" type="image/x-icon"
+       href="edify101.github.io/favicon.ico"/>
+       <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+	<title>For Mentors:</title>
+	<script>
+	</script>
+	<style>
+	/*from http://www.techrepublic.com/blog/web-designer/how-to-get-the-ruled-paper-background-effect-with-css3/ */
+    footer {
+        margin-bottom: 5%;
+    }
+	body {
+   		background: -webkit-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   		background: -moz-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   		background: -ms-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   		background: -o-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   		background: linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   		padding: 3%;
+   		height: 94%;
+        position:relative;
+	}
+	.paper {
+  		font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
+  		width: 80%;
+  		height: 80%;
+  		/*margin: 0 auto;*/
+  		margin-top:10%;
+  		margin-left: 10%;
+  		margin-right:10%;
+  		padding: 6px 5px 4px 42px;
+  		position: relative;
+  		color: #444;
+  		line-height: 20px;
+  		border: 1px solid #d2d2d2;
+  		background: #fff;
+  		background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  		background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  		background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  		background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  		background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  		background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  		-webkit-background-size: 100% 20px;
+  		-moz-background-size: 100% 20px;
+  		-ms-background-size: 100% 20px;
+  		-o-background-size: 100% 20px;
+  		background-size: 100% 20px;
+  		-webkit-border-radius: 3px;
+ 		-moz-border-radius: 3px;
+  		border-radius: 3px;
+  		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  		-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  		box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  		width: 816px;
+  		height: 1056px;
+	}
+	li {
+		list-style-type:none;
+	}
+	
+
+    header {
+
+    }
+
+    header ul {
+         margin-top:-5%;
+        line-height: 150%;
+        list-style-type: none;
+        box-shadow: 100px 100px 50px #888888;
+        margin-top:-3%;
+    }
+            
+    header ul li {
+        /*width: 300px;*/
+        font-size: 20px;
+        display:inline; /*uncomment and box-shadow is box around header.ul*/
+        height: 35px;
+        color: purple;
+        float:left;
+    }
+    
+    header ul li a {
+        text-decoration:none;
+        padding: .2em 1em;
+    }
+    
+    #button:hover {
+        font-weight: bold;
+         font-size:135%;
+    }
+
+    h2 {
+    	margin-left:34%; /*if paper margin-left is 10%, 40% makes it halfway roughly */
+    	margin-top:5%;
+    }
+
+    p {
+    	margin-top:2.5%;
+    	margin-left:-2%;
+    	width:100%;
+    }
+
+    .title {
+    	color:red;
+    }
+
+    blockquote {
+    	font-size: 15px;
+    	color:blue;
+    	margin-top:-2%;
+    }
+
+    hr {
+    	margin-left:-5%;
+    	margin-top:2%;
+    	width:106%;
+    	height:1px;
+    	background:green;
+    }
+
+    .menteetable {
+        margin-top:3%;
+        margin-left:5%;
+    }
+
+    .menteetable table{
+    	border-collapse: collapse;
+        border-spacing: 0;
+		width:75%;
+		height:75%;
+		margin:75px;padding:0px;
+	}
+			
+    .menteetable tr:last-child td:last-child {
+		-moz-border-radius-bottomright:20px;
+		-webkit-border-bottom-right-radius:20px;
+		border-bottom-right-radius:20px;
+	}
+	
+    .menteetable table tr:first-child td:first-child {
+		-moz-border-radius-topleft:20px;
+		-webkit-border-top-left-radius:20px;
+		border-top-left-radius:20px;
+	}
+	
+    .menteetable table tr:first-child td:last-child {
+		-moz-border-radius-topright:20px;
+		-webkit-border-top-right-radius:20px;
+		border-top-right-radius:20px;
+	}
+
+	.menteetable tr:last-child td:first-child{
+		-moz-border-radius-bottomleft:20px;
+		-webkit-border-bottom-left-radius:20px; /*25px*/
+		border-bottom-left-radius:20px;
+	}
+	
+    /*.mentortable tr:hover td{
+	
+	}*/
+
+	.menteetable tr:nth-child(odd) { 
+		background-color:#56aaff; 
+	}
+			
+	.menteetable tr:nth-child(even) { 
+		background-color:#ffffff; 
+	}
+
+	.menteetable td{
+		vertical-align:middle;
+		border:1px solid #007fff;
+		border-width:0px 1px 1px 0px;
+		text-align:center;
+		padding:10px; /*100px*/
+		font-size:10px;
+		font-family:Arial;
+		font-weight:normal;
+		color:#000000;
+	}
+	
+    .menteetable tr:last-child td{
+		border-width:0px 1px 0px 0px;
+        margin:10px;
+	}
+
+	.menteetable tr td:last-child{
+		border-width:0px 0px 1px 0px;
+        margin:10px;
+	}
+
+	.menteetable tr:last-child td:last-child{
+		border-width:0px 0px 0px 0px;
+        margin:10px;
+	}
+
+	.menteetable tr:first-child td {
+		background:-o-linear-gradient(bottom, #007fff 5%, #00007f 100%);	
+		background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05, #007fff), color-stop(1, #00007f) );
+		background:-moz-linear-gradient( center top, #007fff 5%, #00007f 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#00007f");
+		background: -o-linear-gradient(top,#007fff,00007f);
+		background-color:#007fff;
+		border:0px solid #007fff;
+		text-align:center;
+		border-width:0px 0px 1px 1px;
+		font-size:14px;
+		font-family:Arial;
+		font-weight:bold;
+		color:#ffffff;
+        margin:10px;
+	}
+			
+	.menteetable tr:first-child:hover td{
+		background:-o-linear-gradient(bottom, #007fff 5%, #00007f 100%);	
+		background:-webkit-gradient(linear,left top,left bottom, color-stop(0.05, #007fff),color-stop(1, #00007f));
+		background:-moz-linear-gradient( center top, #007fff 5%, #00007f 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#00007f");
+		background: -o-linear-gradient(top,#007fff,00007f);
+		background-color:#007fff;
+        margin: 10px;
+	}
+
+	.menteetable tr:first-child td:first-child{
+		border-width:0px 0px 1px 0px;
+        margin:10px;
+	}
+	
+    .menteetable tr:first-child td:last-child{
+		border-width:0px 0px 1px 1px;
+        margin:10px;
+	}
+
+    h1 {
+        margin-left:18%;
+        margin-bottom:-2%;
+
+    }
+
+
+
+</style>
+</head>
+<header>
+            <ul>
+                <li id = "button"><a href="index.html">Home</a></li>
+                <li id = "button"><a href="about.html">About</a></li>
+                <li id = "button"><a href="resources.html">Resources</a></li>
+                <li id = "button"><a href="database.html">Database of Mentors</a></li>
+                <li id = "button"><a href = "formentors.html">For Mentors</a></li>
+            </ul>
+    </header>
+<body style="visibility:hidden;">
+	
+    <section class = "paper">
+    	<h2><em>It's for the kids</em></h2>
+    	<p id = "first">Have you ever wanted to talk to someone older about something they experienced? Have you ever had a question that your parents couldn't help you with? Or maybe your parents want what's best for you, but they don't know how to help.
+    	</p>
+    	<p id = "second"><span class = "title"><i>Edify101</i></span> aims to provide answers regarding high school classes, SAT/ACT prep, colleges, and what the future holds to eighth-grade and high school students in low-income neighborhoods of the Bay Area. These are high-potential, high-achieving students who are on the path to success--but they still need help getting there. Obstacles include money, peers who aren't as focused as they are,  parents who don't speak English...you can guess the rest.
+    	</p>
+    	<p>All we ask...all that these kids ask...is a chance. Someone who cares. Someone who understands how to get to college, how to navigate high school academics and the college application process. All these parents ask is someone that believes in their child. 
+    	</p>
+    	<p>If you had met some of the ones Lizzie met through the Silicon Valley Education Foundation, you would understand. You would understand how despite peers who did not focus during class, despite peer pressure, some students still raised their hands to answer questions. They still asked questions. They still wanted to learn, and they were ahead of the class--Lizzie gave them more advanced problems. One of the more driven students told her, when she asked him why he let others copy his answers for a problem set,<blockquote>"I always share my answers. How else will they understand? You get used to it."</blockquote> 
+    	</p>
+    	<p>Give students a chance. Answer questions, inspire, motivate, guide. Be there when they need you--but nothing more. So little time commitment, and yet so much impact. With <span class="title"><i>Edify101</i></span>, the mentees will reach out to you first, if your background or interests resonate with them. If you get a parent's email, check in with them maybe monthly. Success in school starts at home. </p>
+    	<hr/>
+    	<h2 style="margin-top:-.75%;">Sample Email to Student</h2>
+    	<div class = "sampleemail" style="margin-top:1%;"><p id = "dearstudent">Dear [student name], </p>
+    		<p>Thanks for reaching out! I just wanted to check in on how your classes are going. What do you think of your teachers? What's your favorite class, and why? What's your most difficult class? I had trouble with algebra in eighth grade, but I remember asking the teacher for extra help, and just spending more time on it--then it made more sense. For some online help, check out the resources page! You should have gotten the password--if not, just ask for it again! 
+    		</p>
+    		<p>What are your short-term goals? I found that setting mini goals helped keep me on track, and gave me something to work for. When I took precalculus my junior year of high school, which is an important year for the college application process, having a checklist of goals helped motivate me. For more motivation, I would suggest making something called a "dream board." It's like a poster with pictures, words, and phrases of what you want to happen--by hanging it in your room, or by your desk, or just seeing it often, it subconsciously reminds your brain to focus on the end goal--which, ultimately, is to go to college.
+    		</p>
+    		<p>How are your parents? Is everything okay at home? Sometimes, my parents didn't understand my goals, and that made it tough to work to achieve them.
+    		</p>
+    	</div>
+    	<p>For more sample emails or questions, contact <a href="MAILTO:lizzie.siegle@gmail.com">Lizzie</a>
+    		.</p>
+    </section>
+    <div class="menteetable">
+    <table >
+        <h1>Students Who May Contact You (or vice versa)</h1>
+        <tr>
+            <td>
+            	Name
+            </td>
+            <td>
+            	Birthday
+            </td>
+            <td>
+                City/Town
+            </td>
+            <td>
+                Current School
+            </td>
+            <td>Favorite class
+            </td>
+            <td>
+                Interests/Hobbies
+            </td>
+            <td>
+            	Email
+            </td>
+            <td>
+            	Phone
+            </td>
+            <td>
+            	Parent Name
+            </td>
+            <td>Parent email
+            </td>
+        </tr>
+        
+        <tr>
+        <td>
+            	David
+            </td>
+            <td>
+            	[Birthday]
+            </td>
+            <td>
+                East Palo Alto
+            </td>
+            <td>
+                [Current School]
+            </td>
+            <td>[Favorite class]
+            </td>
+            <td>
+                [Interests/Hobbies]
+            </td>
+            <td>
+            	<a href = "MAILTO:180dcabrera@gmail.com">David</a>
+            </td>
+            <td>
+            	Phone
+            </td>
+            <td>
+            	Alejandro and Lilia
+            </td>
+            <td><a href = "MAILTO:alejandrocabrera2011@gmail.com">David's dad</a>,<a href="MAILTO: lsanchez1029@gmail.com">David's mom</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Saida
+            </td>
+            <td>
+            	[Birthday]
+            </td>
+            <td>
+                East Palo Alto
+            </td>
+            <td>
+            	[Current School]
+            </td>
+             <td>[Favorite class]
+            </td>
+            <td>
+                [Interests/Hobbies]
+            </td>
+            <td>
+            	<a href ="MAILTO:sledea8@ravenswoodschool.com">Saida</a>
+            </td>
+            <td>
+            	[Phone]
+            </td>
+            <td>
+            	[Parent Name]
+            </td>
+            <td>[parent emails]
+            </td>
+        </tr>
+           <tr>
+            <td>
+                Jonathan
+            </td>
+            <td>[Birthday]
+            </td>
+            <td>
+                East Palo Alto
+            </td>
+            <td>[Current School]
+            </td>
+             <td>[Favorite class]
+            </td>
+            <td>
+                [Interests/Hobbies]
+            </td>
+            <td>
+            	<a href = "MAILTO:jonathanlopez7470@gmail.com">Jonathan</a>
+            </td>
+            <td>
+            	[Phone]
+            </td>
+            <td>
+            	[Parent Name]
+            </td>
+            <td>[parent emails]
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Adamaris
+            </td>
+            <td>
+            	[Birthday]
+            </td>
+            <td>
+                East Palo Alto
+            </td>
+            <td>[Current School]
+             <td>[Favorite class]
+            </td>
+            <td>
+                [Interests/Hobbies]
+            </td>
+            <td>
+            	<a href = "MAILTO:mayis200216@gmail.com">Adamaris</a>
+            </td>
+            <td>
+            	[Phone]
+            </td>
+            <td>
+            	[Parent Name]
+            </td>
+            <td>[parent emails]
+            </td>
+        </tr>
+           <tr>
+            <td>
+                Nathan
+            </td>
+            <td>
+            	[Birthday]
+            <td>
+                East Palo Alto
+            </td>
+            <td>
+            	[Current School]
+            </td>
+             <td>[Favorite class]
+            </td>
+            <td>
+                [Interests/Hobbies]
+            </td>
+            <td>
+            	<a href = "MAILTO:k1ngn8than1@gmail.com">Nathan</a>
+            </td>
+            <td>
+            	[Phone]
+            </td>
+            <td>
+            	Molina Thompson
+            </td>
+            <td><a href = "MAILTO:molinathompson@gmail.com">Nathan's dad</a>
+            </td>
+        </tr>
+    </table>
+</div>
+    <footer><center>
+        &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Edify101.
+    </center>
+    </footer>
+</body>
+<script>
+var password_attempt = prompt("Password?");
+if(password_attempt ==="inspire") {
+	document.getElementsByTagName("body")[0].style.visibility = "visible";
+} else {
+	alert("Wrong password. Either check your email for the password in the mentor form confirmation email, or go to the homepage email form to request password to access the mentor info page. If you'd like to be an Edify101 mentor, fill out this form:https://docs.google.com/forms/d/1AaeM092VnYKxN2YPpCeplCeptiwzaSp-JUUXuwqpHLA/viewform");
+	document.getElementsByTagName("header")[0].style.visibility="visible";
+}
+</script>
+</html>

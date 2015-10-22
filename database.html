@@ -1,0 +1,458 @@
+<html>
+<head>
+    <link rel="SHORTCUT ICON" type="image/x-icon"
+       href="edify101.github.io/favicon.ico"/>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+	<title>Mentor Database</title>
+<style>
+
+
+  /*  .mentortable {
+      margin-left:45%;
+      width:200%;
+      height:35%;
+      border:2px green;
+      margin-top: 5%;
+      padding: 15%;
+      margin-left:50%;
+      overflow:hidden; 
+    }*/
+
+    footer {
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom: 1.6%;
+    }
+
+    #mentortableinfo {
+      width:65%;
+      margin-left:18%;
+      margin-right:20%;
+      padding:2px;
+      line-height: 129%;
+      margin-top: 2%;
+    }
+    /*       .mentortable {
+				margin:10px;padding:0px;
+				box-shadow: 10px 10px 5px #888888;
+				border:1px solid #007fff;
+	
+				-moz-border-radius-bottomleft:25px;
+				-webkit-border-bottom-left-radius:25px;
+				border-bottom-left-radius:25px;
+                margin:30px;
+	
+				-moz-border-radius-bottomright:25px;
+				-webkit-border-bottom-right-radius:25px;
+				border-bottom-right-radius:25px;
+	
+				-moz-border-radius-topright:25px;
+				-webkit-border-top-right-radius:25px;
+				border-top-right-radius:25px;
+	
+				-moz-border-radius-topleft:25px;
+				-webkit-border-top-left-radius:25px;
+				border-top-left-radius:25px;
+			}
+			.mentortable table{
+    			border-collapse: collapse;
+        		border-spacing: 0;
+				width:75%;
+				height:75%;
+				margin:75px;padding:0px;
+			}
+			.mentortable tr:last-child td:last-child {
+				-moz-border-radius-bottomright:20px;
+				-webkit-border-bottom-right-radius:20px;
+				border-bottom-right-radius:20px;
+			}
+			.mentortable table tr:first-child td:first-child {
+				-moz-border-radius-topleft:20px;
+				-webkit-border-top-left-radius:20px;
+				border-top-left-radius:20px;
+			}
+			.mentortable table tr:first-child td:last-child {
+				-moz-border-radius-topright:20px;
+				-webkit-border-top-right-radius:20px;
+				border-top-right-radius:20px;
+			}
+
+			.mentortable tr:last-child td:first-child{
+				-moz-border-radius-bottomleft:20px;
+				-webkit-border-bottom-left-radius:20px; 
+				border-bottom-left-radius:20px;
+			}
+			.mentortable tr:hover td{
+	
+			}
+
+			.mentortable tr:nth-child(odd) { 
+				background-color:#56aaff; 
+			}
+			
+			.mentortable tr:nth-child(even) { 
+				background-color:#ffffff; 
+			}
+
+			.mentortable td{
+				vertical-align:middle;
+				border:1px solid #007fff;
+				border-width:0px 1px 1px 0px;
+				text-align:center;
+				padding:10px; 
+				font-size:10px;
+				font-family:Arial;
+				font-weight:normal;
+				color:#000000;
+			}
+			.mentortable tr:last-child td{
+				border-width:0px 1px 0px 0px;
+                margin:10px;
+			}
+
+			.mentortable tr td:last-child{
+				border-width:0px 0px 1px 0px;
+                margin:10px;
+			}
+
+			.mentortable tr:last-child td:last-child{
+				border-width:0px 0px 0px 0px;
+                margin:10px;
+			}
+
+			.mentortable tr:first-child td {
+				background:-o-linear-gradient(bottom, #007fff 5%, #00007f 100%);	
+				background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05, #007fff), color-stop(1, #00007f) );
+				background:-moz-linear-gradient( center top, #007fff 5%, #00007f 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#00007f");
+				background: -o-linear-gradient(top,#007fff,00007f);
+				background-color:#007fff;
+				border:0px solid #007fff;
+				text-align:center;
+				border-width:0px 0px 1px 1px;
+				font-size:14px;
+				font-family:Arial;
+				font-weight:bold;
+				color:#ffffff;
+                margin:10px;
+			}
+			
+			.mentortable tr:first-child:hover td{
+				background:-o-linear-gradient(bottom, #007fff 5%, #00007f 100%);	
+				background:-webkit-gradient(linear,left top,left bottom, color-stop(0.05, #007fff),color-stop(1, #00007f));
+				background:-moz-linear-gradient( center top, #007fff 5%, #00007f 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#00007f");
+				background: -o-linear-gradient(top,#007fff,00007f);
+				background-color:#007fff;
+                margin: 10px;
+			}
+
+			.mentortable tr:first-child td:first-child{
+				border-width:0px 0px 1px 0px;
+                margin:10px;
+			}
+			.mentortable tr:first-child td:last-child{
+				border-width:0px 0px 1px 1px;
+                margin:10px;
+			}*/
+          /*   html { overflow: visible; }
+        #sheets-viewport { overflow: auto; }
+        #sheets-viewport.widget-viewport { overflow: hidden; }
+        .grid-container { overflow: visible; background: white;}
+        .grid-table-container { overflow: visible; }
+        #top-bar {
+          background: url("//ssl.gstatic.com/docs/spreadsheets/publishheader.png") repeat-x bottom;
+          margin: 0;
+          overflow: hidden;
+        }
+        #top-bar {
+          border-bottom: 1px solid #ccc;
+          padding: 6px 6px 0;
+        }
+        #doc-title { padding-bottom: 5px; }
+        #doc-title .name { font-size: 15px; }
+        #sheet-menu {
+          font-size: 13px;
+          margin: 6px 0 0;
+          padding: 0 0 5px;
+        }
+        #sheet-menu li {
+          display: inline;
+          list-style-type: none;
+          margin: 0;
+          padding: 5px 8px;
+        }
+        #sheet-menu li.active {
+          background-color: #fff;
+          font-weight: bold;
+          border: 1px solid #999;
+        }
+        #top-bar #sheet-menu li.active {
+          border-bottom: 0;
+        }
+        #sheet-menu a, #sheet-menu a:visited { color: #07c; }
+        #footer {
+          background: #f0f0f0;
+          border-top: 1px #ccc solid;
+          border-bottom: 1px #ccc solid;
+          font-size: 13;
+          padding: 10px 10px;
+        }
+        .dash {
+          padding: 0 6px;
+        }
+        .ritz .waffle a { color: inherit; }.ritz .waffle .s0{text-align:left;color:#000000;background-color:#ffffff;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s2{border-right: none;text-align:left;color:#000000;background-color:#ffffff;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s1{text-align:right;color:#000000;background-color:#ffffff;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}*/
+
+		</style>
+    </head>
+    <header>
+            <ul>
+                <li id = "button"><a href="index.html">Home</a></li>
+                <li id = "button"><a href="about.html">About</a></li>
+                <li id = "button"><a href="resources.html">Resources</a></li>
+                <li id = "button"><a href="database.html">Database of Mentors</a></li>
+                <li id = "button"><a href = "formentors.html">For Mentors</a></li>
+            </ul>
+    </header>
+	<body style = "visibility:hidden;">
+
+
+  <div class = "mentortable">
+
+<iframe src="https://docs.google.com/spreadsheets/d/1jVp3kYz6U1vAf5J2RYuw_vIolF-DsfcPM1rMHkghlD4/pubhtml?gid=1056358252&amp;single=true&amp;widget=true&amp;headers=false" style="position:relative;width:80%;right:2px;border:5px solid #FF9900;margin-left:10%;margin-top:5%;height:75%;"></iframe>
+ </div>
+<!-- Thats the markup! -->
+<!-- That looks cool. We are done!! -->
+
+<p id = "mentortableinfo">Feel free to email any one here--they can answer your questions about high school, what classes you should take, volunteering/extracurricular activities, study tips, essay reading, and more. Need someone to talk to about what's happening at home, school, or with friends? You can trust these people. We're here to help, and stick with you all through high school and on to college.</br>
+If you ever need AP review books, or SAT/ACT prep books, contact us. We want to help you succeed and go on to college. If you have the drive and determination, you're in the right place.</p> 
+	<!-- <div class="mentortable"> -->
+
+      
+   <!--  <table >
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                High School
+            </td>
+            <td>
+                College and field of study(if applicable)
+            </td>
+            <td>
+                Interests/Hobbies
+            </td>
+            <td>
+                Email
+            </td>
+        </tr>
+        
+        <tr>
+            <td >
+                Lizzie
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                Bryn Mawr College, intended Computer Science and Linguistics. Or English.
+            </td>
+            <td>
+                Tennis, programming, reading, writing, teaching
+            </td>
+            <td >
+                <a href="MAILTO:lizzie.siegle@gmail.com">lizzie.siegle@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Savannah
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                Dartmouth, interested in graphic design, art, environmental studies, and CS
+            </td>
+            <td>
+                Youtube, running, art
+            </td>
+            <td>
+                <a href="MAILTO:savannah12317@gmail.com">savannah12317@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Elise
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC Berkeley, Biology major
+            </td>
+            <td>
+                tap dancing, softball
+            </td>
+            <td>
+                <a href="MAILTO:Echu149@aol.com">Echu149@aol.com</a>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                Tommy
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC Merced, intended Mechanical Engineering
+            </td>
+            <td>
+                soccer, video games, ping pong, League of Legends
+            </td>
+            <td>
+                <a href="MAILTO:tommysiegle@att.net">tommysiegle@att.net</a>
+            </td>
+        </tr>
+          <tr>
+            <td>
+                Payal
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC San Diego, Economics and Computer Science
+            </td>
+            <td>
+                dancing, playing basketball, reading and going on hikes
+            </td>
+            <td>
+                <a href="MAILTO:payalkela@gmail.com">payalkela@gmail.com</a>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Tejas
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC San Diego, Computer Science
+            </td>
+            <td>
+                Soccer, basketball, photography, videography, video games, bicycling, Internet, movies, hip hop, rap
+            </td>
+            <td>
+                <a href="MAILTO:tejasbadadare@gmail.com">tejasbadadare@gmail.com</a>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Jillian
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                n/a (senior in high school, intended major in Anthropology)
+            </td>
+            <td>
+                Badminton, Ultimate Frisbee, Social Networking (Facebook, Twitter, Instagram, Pinterest, etc.), hanging out with friends and family, watching TV and movies, dancing, reading, walking/hiking, volunteering, and more!
+            </td>
+            <td>
+                <a href="MAILTO:jillianosheroff@gmail.com">jillianosheroff@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Teresa
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                New York University (economics)
+            </td>
+            <td>
+                Read, binge watch TV shows, shopping
+            </td>
+            <td>
+                <a href="MAILTO:14teresalee@gmail.com">14teresalee@gmail.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mark
+            </td>
+            <td>
+                San Mateo High
+            </td>
+            <td>
+                UC San Diego (mechanical engineering)
+            </td>
+            <td>
+                basketball, Super Smash Bros, saxophone, guitar, Frisbee, Sonic the Hedgehog, football, soccer, Golden State Warriors
+            </td>
+            <td>
+                <a href="MAILTO:markwoo1240@yahoo.com">markwoo1240@yahoo.com</a>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Hwai-Ray (or just Ray)
+            </td>
+            <td>
+                Menlo School
+            </td>
+            <td>
+                Brown University (mathematics)
+            </td>
+            <td>
+               Math contests, Chess, Go Game, Nash Hex, Roman History, Puzzles
+            </td>
+            <td>
+                <a href="MAILTO:Hwai-Ray_Tung@brown.edu">Hwai-Ray_Tung@brown.edu</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td >
+                Your name! Yes you!
+            </td>
+            <td>
+                Row 3
+            </td>
+            <td>
+                Row 3
+            </td>
+            <td>
+                Row 3
+            </td>
+            <td>
+                Row 3
+            </td>
+        </tr> -->
+ <!--    </table> -->
+<!-- </div> -->
+ <!-- <iframe src="https://docs.google.com/spreadsheets/d/1nIrrRnUp0C0HlEwXz43qq-Gd9UfiH74YwM6a5HkWlJE/pubhtml?gid=1063830476&amp;single=true&amp;widget=true&amp;headers=false"></iframe> -->
+  <footer>
+            &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Edify101.
+        </footer>
+</body>
+<script>
+    var passAttempt = prompt("Password?");
+        if(passAttempt === "college"){
+            document.getElementsByTagName("body")[0].style.visibility = "visible";
+            console.log("yash");
+        } else {
+            alert("Wrong password. Go to the homepage email form to request password to access mentor database and all of the resources.");
+            document.getElementsByTagName("header")[0].style.visibility="visible";
+        }
+</script>
+
+</html>
